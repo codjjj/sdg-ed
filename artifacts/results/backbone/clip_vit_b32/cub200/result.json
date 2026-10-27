@@ -1,0 +1,108 @@
+{
+  "dataset": "cub200",
+  "n_train": 4794,
+  "n_test": 5794,
+  "n_classes": 200,
+  "anisotropy": {
+    "top10_var_pct": 0.4235181028665388,
+    "eig10_tail10_ratio": 1651.9065173997842,
+    "condition_number": 988227362.7082797
+  },
+  "fisher": {
+    "tail128_mass": 0.3492258406509754,
+    "tail256_mass": 0.202854702533383,
+    "top64_mass": 0.5354365226183095,
+    "top128_mass": 0.6507741593490242,
+    "fisher_weighted_rank": 122.6463928584597,
+    "spearman_logeig_logfisher": 0.9337617910357962
+  },
+  "classifier_matrix": {
+    "cosine": 0.6748360395431519,
+    "mahalanobis": 0.7172937521574042,
+    "whitened_cosine": 0.6736279129981995,
+    "mahal_minus_cos_pp": 4.245771261425235
+  },
+  "pca_ablation": {
+    "all": {
+      "dim": 512,
+      "cosine": 0.6679323315620422,
+      "mahalanobis": 0.7172937521574042
+    },
+    "top16": {
+      "dim": 16,
+      "cosine": 0.4706593155860901,
+      "mahalanobis": 0.5543665861235761
+    },
+    "top32": {
+      "dim": 32,
+      "cosine": 0.5963065028190613,
+      "mahalanobis": 0.6753538142906454
+    },
+    "top64": {
+      "dim": 64,
+      "cosine": 0.647739052772522,
+      "mahalanobis": 0.722126337590611
+    },
+    "top128": {
+      "dim": 128,
+      "cosine": 0.6610286235809326,
+      "mahalanobis": 0.7305833620987228
+    },
+    "top256": {
+      "dim": 256,
+      "cosine": 0.6668967604637146,
+      "mahalanobis": 0.7298929927511218
+    },
+    "top512": {
+      "dim": 512,
+      "cosine": 0.6679323315620422,
+      "mahalanobis": 0.7172937521574042
+    },
+    "bottom64": {
+      "dim": 64,
+      "cosine": 0.04021401330828667,
+      "mahalanobis": 0.046082153952364514
+    },
+    "bottom128": {
+      "dim": 128,
+      "cosine": 0.07956507056951523,
+      "mahalanobis": 0.09699689333793579
+    },
+    "drop_bottom64": {
+      "dim": 448,
+      "cosine": 0.6679323315620422,
+      "mahalanobis": 0.7224715222644115
+    },
+    "drop_bottom128": {
+      "dim": 384,
+      "cosine": 0.667587161064148,
+      "mahalanobis": 0.7312737314463238
+    },
+    "drop_top16": {
+      "dim": 496,
+      "cosine": 0.5859509706497192,
+      "mahalanobis": 0.6568864342423196
+    },
+    "drop_top64": {
+      "dim": 448,
+      "cosine": 0.43769416213035583,
+      "mahalanobis": 0.5226095961339317
+    },
+    "band_64_128": {
+      "dim": 64,
+      "cosine": 0.2804625332355499,
+      "mahalanobis": 0.3022091819123231
+    },
+    "band_128_256": {
+      "dim": 128,
+      "cosine": 0.26579219102859497,
+      "mahalanobis": 0.2854677252329997
+    },
+    "band_256_end": {
+      "dim": 256,
+      "cosine": 0.2008974850177765,
+      "mahalanobis": 0.2374870555747325
+    }
+  },
+  "cil": null
+}

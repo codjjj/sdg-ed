@@ -1,0 +1,4730 @@
+[
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8322118745414667,
+    "spearman": 0.6920907185057239,
+    "mae_pp": 4.653612142085519,
+    "rmse_pp": 6.044383585400525,
+    "ci95": {
+      "pearson": [
+        0.7545789291550399,
+        0.8948773440453444
+      ],
+      "spearman": [
+        0.4669716028205996,
+        0.8249094720791773
+      ],
+      "mae_pp": [
+        3.6629014931831074,
+        5.742962949491004
+      ],
+      "rmse_pp": [
+        4.674561183975286,
+        7.408628254817348
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.6729686138119,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.24840015949447736,
+        "route_to_whitening_frac": 0.7407407407407407,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.62277024448966,
+            81.34022284017647
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.12133658959449761,
+            0.39399442274108576
+          ],
+          "route_to_whitening_frac": [
+            0.6111111111111112,
+            0.8518518518518519
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.57419454327916,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.34717423002722514,
+        "route_to_whitening_frac": 0.5370370370370371,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.57339665424823,
+            81.0107812080796
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.1739932498315766,
+            0.561324455863486
+          ],
+          "route_to_whitening_frac": [
+            0.4074074074074074,
+            0.6666666666666666
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.59192099952983,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.32944777377655887,
+        "route_to_whitening_frac": 0.42592592592592593,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.89743742800114,
+            81.2630875116839
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.16536093494061266,
+            0.5307721834044128
+          ],
+          "route_to_whitening_frac": [
+            0.2962962962962963,
+            0.5555555555555556
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.7888166046826,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.1325521686237905,
+        "route_to_whitening_frac": 0.25925925925925924,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.43959390907584,
+            80.32430945782538
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.473292906157102,
+            1.9343816719076592
+          ],
+          "route_to_whitening_frac": [
+            0.14814814814814814,
+            0.37037037037037035
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "full",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.32944777377655887,
+    "routing_acc_5pp": 76.59192099952983
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.751698752877427,
+    "spearman": 0.6782923575375533,
+    "mae_pp": 5.4550029074793445,
+    "rmse_pp": 7.2411000619950485,
+    "ci95": {
+      "pearson": [
+        0.6382836867886889,
+        0.845860787175038
+      ],
+      "spearman": [
+        0.4793844101390656,
+        0.7993005526966762
+      ],
+      "mae_pp": [
+        4.231524814808464,
+        6.78221698612855
+      ],
+      "rmse_pp": [
+        5.392099945441449,
+        9.007081320974866
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.67770935455266,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.24365941875372776,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.6320146889341,
+            81.34958580313942
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.1167840147179211,
+            0.38999385921081375
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.34573860965091,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5756301636554717,
+        "route_to_whitening_frac": 0.5370370370370371,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.21542018399941,
+            80.89816068212633
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.19690599955638266,
+            1.1916461204363136
+          ],
+          "route_to_whitening_frac": [
+            0.4074074074074074,
+            0.6666666666666666
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.36225371554876,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5591150577576198,
+        "route_to_whitening_frac": 0.42592592592592593,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.57498311051356,
+            81.16733508406739
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.1890240118052286,
+            1.105769394743293
+          ],
+          "route_to_whitening_frac": [
+            0.2962962962962963,
+            0.5555555555555556
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.84504345022535,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.07632532308104,
+        "route_to_whitening_frac": 0.2962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.50393617130983,
+            80.39584135434427
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.4086676768468714,
+            1.879045406375888
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.42592592592592593
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "full",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.5591150577576198,
+    "routing_acc_5pp": 76.36225371554876
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8013214473218463,
+    "spearman": 0.67257480465019,
+    "mae_pp": 4.124798691090289,
+    "rmse_pp": 5.580678346594835,
+    "ci95": {
+      "pearson": [
+        0.730470563870731,
+        0.8757161392911662
+      ],
+      "spearman": [
+        0.4591633314274233,
+        0.8094949494948456
+      ],
+      "mae_pp": [
+        3.1411526617206897,
+        5.1599024875620865
+      ],
+      "rmse_pp": [
+        4.167768040473004,
+        6.96201410712417
+      ]
+    },
+    "feature_set": "full",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7127239835811899,
+    "spearman": 0.6295025728987186,
+    "mae_pp": 4.872192072332319,
+    "rmse_pp": 6.659782209882863,
+    "ci95": {
+      "pearson": [
+        0.6038825634098619,
+        0.8284336425108182
+      ],
+      "spearman": [
+        0.41352010672760087,
+        0.7629921860109559
+      ],
+      "mae_pp": [
+        3.703944947634994,
+        6.134130263705021
+      ],
+      "rmse_pp": [
+        4.818311263679563,
+        8.452444057449606
+      ]
+    },
+    "feature_set": "full",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.765681788616523,
+    "spearman": 0.6649514008003721,
+    "mae_pp": 5.122802406936743,
+    "rmse_pp": 7.047365171163187,
+    "ci95": {
+      "pearson": [
+        0.6255501313441162,
+        0.8682724381013637
+      ],
+      "spearman": [
+        0.4280045740422549,
+        0.8236001524679714
+      ],
+      "mae_pp": [
+        3.9356001339894617,
+        6.5629574929829415
+      ],
+      "rmse_pp": [
+        4.952577740197145,
+        9.080967156442846
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.66368860190643,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.25768017139995436,
+        "route_to_whitening_frac": 0.7037037037037037,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.54129635036556,
+            81.34281739889533
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.11796838859009201,
+            0.4244451119059092
+          ],
+          "route_to_whitening_frac": [
+            0.5740740740740741,
+            0.8148148148148148
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.69703880359327,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.2243299697131107,
+        "route_to_whitening_frac": 0.6111111111111112,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.77339256361797,
+            81.08193073648204
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.10203332258349657,
+            0.3748034336065044
+          ],
+          "route_to_whitening_frac": [
+            0.48148148148148145,
+            0.7407407407407407
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.49863660104366,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.42273217226272974,
+        "route_to_whitening_frac": 0.4444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.89385708943875,
+            81.11519492856391
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.22741376387895917,
+            0.6678206195695074
+          ],
+          "route_to_whitening_frac": [
+            0.3148148148148148,
+            0.5740740740740741
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 76.12390259705363,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.7974661762527591,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.98364381407282,
+            80.5342092794547
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.37968647128307553,
+            1.392884644905128
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "spectral_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "top10_var",
+      "top50_var"
+    ],
+    "routing_regret_5pp": 0.42273217226272974,
+    "routing_acc_5pp": 76.49863660104366
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6013223689996381,
+    "spearman": 0.589403468648676,
+    "mae_pp": 6.447837819693517,
+    "rmse_pp": 8.832774824373065,
+    "ci95": {
+      "pearson": [
+        0.42417417252066075,
+        0.7546382735947241
+      ],
+      "spearman": [
+        0.3412883552505755,
+        0.7636859157612894
+      ],
+      "mae_pp": [
+        4.921268265757471,
+        8.171419061972243
+      ],
+      "rmse_pp": [
+        6.381999398346021,
+        11.140026199685444
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.68666623300288,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.23470254030349968,
+        "route_to_whitening_frac": 0.7407407407407407,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.5656953235962,
+            81.36429888037682
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.10006851851851906,
+            0.40067611034406697
+          ],
+          "route_to_whitening_frac": [
+            0.6111111111111112,
+            0.8518518518518519
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.60768133451303,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.31368743879335304,
+        "route_to_whitening_frac": 0.6481481481481481,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.63168733752833,
+            81.0636255994948
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.14201354968831625,
+            0.5241476264292976
+          ],
+          "route_to_whitening_frac": [
+            0.5185185185185185,
+            0.7777777777777778
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.35572794911731,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5656408241890731,
+        "route_to_whitening_frac": 0.5,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.54106312415406,
+            81.15985797395555
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.18654888647162415,
+            1.1212343892001861
+          ],
+          "route_to_whitening_frac": [
+            0.37037037037037035,
+            0.6296296296296297
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.2228469304238,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.6985218428825943,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            69.88600431771005,
+            79.90442496745908
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.5336979581415178,
+            3.4163755366460316
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "spectral_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "top10_var",
+      "top50_var"
+    ],
+    "routing_regret_5pp": 0.5656408241890731,
+    "routing_acc_5pp": 76.35572794911731
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6989374960052736,
+    "spearman": 0.5755288736420074,
+    "mae_pp": 4.671931983017102,
+    "rmse_pp": 6.740130366728237,
+    "ci95": {
+      "pearson": [
+        0.5377093462247577,
+        0.8313758702711954
+      ],
+      "spearman": [
+        0.30423289498757294,
+        0.7786201639030826
+      ],
+      "mae_pp": [
+        3.4743170183317758,
+        6.1522375519814
+      ],
+      "rmse_pp": [
+        4.646620047705805,
+        8.760022780633518
+      ]
+    },
+    "feature_set": "spectral_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "top10_var",
+      "top50_var"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.52755089725848,
+    "spearman": 0.45294453973693444,
+    "mae_pp": 5.753363077712783,
+    "rmse_pp": 8.156397154365845,
+    "ci95": {
+      "pearson": [
+        0.31766919682644273,
+        0.723253543611542
+      ],
+      "spearman": [
+        0.1866666666666427,
+        0.6734991423669807
+      ],
+      "mae_pp": [
+        4.30888159244206,
+        7.438418891730681
+      ],
+      "rmse_pp": [
+        5.584829620347242,
+        10.5023916752934
+      ]
+    },
+    "feature_set": "spectral_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "top10_var",
+      "top50_var"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8184604341998892,
+    "spearman": 0.6653325709928629,
+    "mae_pp": 4.947844937225309,
+    "rmse_pp": 6.251872094441376,
+    "ci95": {
+      "pearson": [
+        0.7296566485795937,
+        0.8870459431406071
+      ],
+      "spearman": [
+        0.4292147894034135,
+        0.8093443872688119
+      ],
+      "mae_pp": [
+        3.970724584431448,
+        5.987135844189202
+      ],
+      "rmse_pp": [
+        5.06072228514458,
+        7.352430826426151
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.55279853013688,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.36857024316950815,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.4768090653666,
+            81.27141935176824
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.18721214069257724,
+            0.5750041907309512
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.60509357627694,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.3162751970294475,
+        "route_to_whitening_frac": 0.5740740740740741,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.59668011409914,
+            81.04996815110442
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.15442803158297158,
+            0.5209626372472975
+          ],
+          "route_to_whitening_frac": [
+            0.4444444444444444,
+            0.7037037037037037
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.61554233140954,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.3058264418968393,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.92133091953872,
+            81.28808675458995
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.1405366906886374,
+            0.5032316327293376
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 76.08551194151892,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.8358568317874737,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.91050333053637,
+            80.47514254789408
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.3304062926727233,
+            1.5076876205460814
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "covariance_only",
+    "features": [
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.3058264418968393,
+    "routing_acc_5pp": 76.61554233140954
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7622373047856615,
+    "spearman": 0.6762340384981026,
+    "mae_pp": 5.582076668502146,
+    "rmse_pp": 7.088239314598401,
+    "ci95": {
+      "pearson": [
+        0.6643865489020897,
+        0.847643400296707
+      ],
+      "spearman": [
+        0.4543815513626251,
+        0.8076672384218517
+      ],
+      "mae_pp": [
+        4.434833790288553,
+        6.783226066613055
+      ],
+      "rmse_pp": [
+        5.75712365499766,
+        8.359530232210261
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.54940579086296,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.37196298244343007,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.47830521498157,
+            81.26325994582766
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.1937514265996848,
+            0.5788914061191496
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.61027876146211,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.31109001184427276,
+        "route_to_whitening_frac": 0.5185185185185185,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.59718196595102,
+            81.05587768483291
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.1481963319977564,
+            0.5168311937183048
+          ],
+          "route_to_whitening_frac": [
+            0.3888888888888889,
+            0.6481481481481481
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.63243122029843,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.28893755300796187,
+        "route_to_whitening_frac": 0.4444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.93722530787456,
+            81.30497564347883
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.12435161225807567,
+            0.4912104528958832
+          ],
+          "route_to_whitening_frac": [
+            0.3148148148148148,
+            0.5740740740740741
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.84504345022535,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.07632532308104,
+        "route_to_whitening_frac": 0.2962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.50393617130983,
+            80.39584135434427
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.4086676768468714,
+            1.879045406375888
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.42592592592592593
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "covariance_only",
+    "features": [
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.28893755300796187,
+    "routing_acc_5pp": 76.63243122029843
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8046353341887481,
+    "spearman": 0.6740232513816553,
+    "mae_pp": 4.134609919984016,
+    "rmse_pp": 5.52216404981485,
+    "ci95": {
+      "pearson": [
+        0.7230729583495152,
+        0.8757327376852895
+      ],
+      "spearman": [
+        0.449839908519096,
+        0.8176481799122257
+      ],
+      "mae_pp": [
+        3.1971896185849302,
+        5.11367797025047
+      ],
+      "rmse_pp": [
+        4.296986984715089,
+        6.712058629458804
+      ]
+    },
+    "feature_set": "covariance_only",
+    "features": [
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7442310953161366,
+    "spearman": 0.6536687631026415,
+    "mae_pp": 4.657041338543367,
+    "rmse_pp": 6.26210967364107,
+    "ci95": {
+      "pearson": [
+        0.6516682313638819,
+        0.8305815070091667
+      ],
+      "spearman": [
+        0.42448827901652647,
+        0.7899790356393116
+      ],
+      "mae_pp": [
+        3.578373721321047,
+        5.766705971463448
+      ],
+      "rmse_pp": [
+        4.84416724123491,
+        7.637208162066777
+      ]
+    },
+    "feature_set": "covariance_only",
+    "features": [
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.3273650531386842,
+    "spearman": 0.6012959786543919,
+    "mae_pp": 7.028520342687938,
+    "rmse_pp": 10.530315843207891,
+    "ci95": {
+      "pearson": [
+        0.07169897811725504,
+        0.7127852071404637
+      ],
+      "spearman": [
+        0.3574728416237391,
+        0.78083095101953
+      ],
+      "mae_pp": [
+        5.128618576208479,
+        9.266627918268833
+      ],
+      "rmse_pp": [
+        7.337893978248102,
+        13.552154986455454
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.74485025478788,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.1765185185185092,
+        "route_to_whitening_frac": 1.0,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.65493510157529,
+            81.45646122471656
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.06405740740740518,
+            0.31515555555555497
+          ],
+          "route_to_whitening_frac": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.78322062515824,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.1381481481481539,
+        "route_to_whitening_frac": 0.8333333333333334,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.86659720318164,
+            81.18589672427306
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.04658796296296869,
+            0.2486240740740815
+          ],
+          "route_to_whitening_frac": [
+            0.7407407407407407,
+            0.9259259259259259
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.54984622105115,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.37152255225523234,
+        "route_to_whitening_frac": 0.5,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.96508954886211,
+            81.18609330780409
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.16128731206453473,
+            0.6287434268426585
+          ],
+          "route_to_whitening_frac": [
+            0.37037037037037035,
+            0.6296296296296297
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 72.81981708865828,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 4.101551684648097,
+        "route_to_whitening_frac": 0.14814814814814814,
+        "ci95": {
+          "mean_chosen_acc": [
+            67.07089766644539,
+            77.79254627685138
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            2.061712835686206,
+            6.388314719174585
+          ],
+          "route_to_whitening_frac": [
+            0.05555555555555555,
+            0.24074074074074073
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "variance_only",
+    "features": [
+      "top10_var",
+      "top50_var"
+    ],
+    "routing_regret_5pp": 0.37152255225523234,
+    "routing_acc_5pp": 76.54984622105115
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.0771575856411039,
+    "spearman": 0.40354488279011397,
+    "mae_pp": 8.008047000591164,
+    "rmse_pp": 11.776465250118498,
+    "ci95": {
+      "pearson": [
+        -0.10030968603095212,
+        0.4530154801398877
+      ],
+      "spearman": [
+        0.13359634076613497,
+        0.6282199352009864
+      ],
+      "mae_pp": [
+        5.86287691951616,
+        10.434269761499229
+      ],
+      "rmse_pp": [
+        8.309556734339713,
+        14.934694719040804
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.74485025478788,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.1765185185185092,
+        "route_to_whitening_frac": 1.0,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.65493510157529,
+            81.45646122471656
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.06405740740740518,
+            0.31515555555555497
+          ],
+          "route_to_whitening_frac": [
+            1.0,
+            1.0
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.75899840293602,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.16237037037036828,
+        "route_to_whitening_frac": 0.9444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.87302151204992,
+            81.16251175926816
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.05884537037036702,
+            0.2868046296296324
+          ],
+          "route_to_whitening_frac": [
+            0.8703703703703703,
+            1.0
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 74.109126153037,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 2.8122426202693895,
+        "route_to_whitening_frac": 0.4444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            68.82956140126524,
+            79.55576581283461
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.9146368648624081,
+            5.006518849719247
+          ],
+          "route_to_whitening_frac": [
+            0.3148148148148148,
+            0.5740740740740741
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 70.2074744516509,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 6.71389432165549,
+        "route_to_whitening_frac": 0.05555555555555555,
+        "ci95": {
+          "mean_chosen_acc": [
+            64.12355927214526,
+            75.84871601123841
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            3.99850995796597,
+            9.702642238656374
+          ],
+          "route_to_whitening_frac": [
+            0.0,
+            0.1111111111111111
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "variance_only",
+    "features": [
+      "top10_var",
+      "top50_var"
+    ],
+    "routing_regret_5pp": 2.8122426202693895,
+    "routing_acc_5pp": 74.109126153037
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.28802910909054347,
+    "spearman": 0.44372022107865455,
+    "mae_pp": 6.011009339723982,
+    "rmse_pp": 9.187820626482853,
+    "ci95": {
+      "pearson": [
+        0.006860751138301916,
+        0.7159334614920477
+      ],
+      "spearman": [
+        0.15415284924716904,
+        0.6716657137410991
+      ],
+      "mae_pp": [
+        4.328402602111326,
+        7.998041364249092
+      ],
+      "rmse_pp": [
+        6.2409053030902335,
+        12.05400993830492
+      ]
+    },
+    "feature_set": "variance_only",
+    "features": [
+      "top10_var",
+      "top50_var"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": -0.007213266301906308,
+    "spearman": 0.19252906422715274,
+    "mae_pp": 6.8675667177562385,
+    "rmse_pp": 10.443227500155682,
+    "ci95": {
+      "pearson": [
+        -0.17445830591789183,
+        0.3456378483754032
+      ],
+      "spearman": [
+        -0.11760625119114176,
+        0.4765866209261824
+      ],
+      "mae_pp": [
+        4.935342225510414,
+        9.077094642834243
+      ],
+      "rmse_pp": [
+        7.1904217517730125,
+        13.417604635612316
+      ]
+    },
+    "feature_set": "variance_only",
+    "features": [
+      "top10_var",
+      "top50_var"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6704241883723592,
+    "spearman": 0.4824471126357301,
+    "mae_pp": 5.0780053740215285,
+    "rmse_pp": 8.080550692736157,
+    "ci95": {
+      "pearson": [
+        0.4761512949994528,
+        0.8322049509362706
+      ],
+      "spearman": [
+        0.21311225462166122,
+        0.6915189632169874
+      ],
+      "mae_pp": [
+        3.4576245313132583,
+        6.905812717888053
+      ],
+      "rmse_pp": [
+        5.495433966008143,
+        10.542086235530396
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.5043817634943,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.4169870098120865,
+        "route_to_whitening_frac": 0.9814814814814815,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.3845771765053,
+            81.36496539929047
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.09069907407407984,
+            0.9589369553621931
+          ],
+          "route_to_whitening_frac": [
+            0.9444444444444444,
+            1.0
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.28883461861048,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.6325341546959073,
+        "route_to_whitening_frac": 0.5740740740740741,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.19561159396054,
+            80.83334918194463
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.24721938002172622,
+            1.2281188098380844
+          ],
+          "route_to_whitening_frac": [
+            0.4439814814814815,
+            0.7037037037037037
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.15383475693629,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.7675340163700972,
+        "route_to_whitening_frac": 0.4444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.31666306048889,
+            80.928298087285
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.351240888897173,
+            1.3588417621325912
+          ],
+          "route_to_whitening_frac": [
+            0.3148148148148148,
+            0.5740740740740741
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.04176966665547,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.87959910665092,
+        "route_to_whitening_frac": 0.2777777777777778,
+        "ci95": {
+          "mean_chosen_acc": [
+            69.62309170887534,
+            79.74404308412548
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.6772313719933502,
+            3.5967222229601314
+          ],
+          "route_to_whitening_frac": [
+            0.16666666666666666,
+            0.3888888888888889
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "tail_fisher_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher"
+    ],
+    "routing_regret_5pp": 0.7675340163700972,
+    "routing_acc_5pp": 76.15383475693629
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.5984562627554463,
+    "spearman": 0.4211549456831935,
+    "mae_pp": 5.602376804744224,
+    "rmse_pp": 8.736203214247707,
+    "ci95": {
+      "pearson": [
+        0.36668755359546557,
+        0.7976615290488706
+      ],
+      "spearman": [
+        0.1575738517247749,
+        0.6324928530588094
+      ],
+      "mae_pp": [
+        3.867684492732554,
+        7.5287146123390665
+      ],
+      "rmse_pp": [
+        6.0331630332842945,
+        11.276523014540574
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.43170782943422,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.4896609438721722,
+        "route_to_whitening_frac": 0.9629629629629629,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.26755439592453,
+            81.36496539929047
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.1245814814814758,
+            1.07466755258861
+          ],
+          "route_to_whitening_frac": [
+            0.9074074074074074,
+            1.0
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.28431610009196,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.6370526732144333,
+        "route_to_whitening_frac": 0.5925925925925926,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.191093075442,
+            80.83334918194463
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.25057293910946576,
+            1.22830839059278
+          ],
+          "route_to_whitening_frac": [
+            0.46296296296296297,
+            0.7041666666666642
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.17531623841778,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.7460525348886082,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.32714688192867,
+            80.97126105024795
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.32662314848020624,
+            1.3302561456464004
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 73.99718283019403,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 2.924185943112345,
+        "route_to_whitening_frac": 0.25925925925925924,
+        "ci95": {
+          "mean_chosen_acc": [
+            68.21506687524146,
+            79.02592265586895
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            1.1964852903859953,
+            5.121307035268802
+          ],
+          "route_to_whitening_frac": [
+            0.14814814814814814,
+            0.37037037037037035
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "tail_fisher_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher"
+    ],
+    "routing_regret_5pp": 0.7460525348886082,
+    "routing_acc_5pp": 76.17531623841778
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6237008446242884,
+    "spearman": 0.5467886411281937,
+    "mae_pp": 4.549548509544054,
+    "rmse_pp": 7.286262250187223,
+    "ci95": {
+      "pearson": [
+        0.4469010746494432,
+        0.8091370522993947
+      ],
+      "spearman": [
+        0.30090718505808983,
+        0.7204059462549102
+      ],
+      "mae_pp": [
+        3.1332897894142526,
+        6.199891400357876
+      ],
+      "rmse_pp": [
+        4.731437479613718,
+        9.694293143422707
+      ]
+    },
+    "feature_set": "tail_fisher_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.569287175574034,
+    "spearman": 0.5066895368781511,
+    "mae_pp": 4.888122378531368,
+    "rmse_pp": 7.701036036977337,
+    "ci95": {
+      "pearson": [
+        0.3535033339836662,
+        0.7882737195303622
+      ],
+      "spearman": [
+        0.2549571183533121,
+        0.6911168286639097
+      ],
+      "mae_pp": [
+        3.3931016135767136,
+        6.5572868172087775
+      ],
+      "rmse_pp": [
+        5.029906704086873,
+        10.178454312274226
+      ]
+    },
+    "feature_set": "tail_fisher_only",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6118813249838491,
+    "spearman": 0.4382313703067858,
+    "mae_pp": 5.50817869990362,
+    "rmse_pp": 8.603288714290242,
+    "ci95": {
+      "pearson": [
+        0.4040082426723171,
+        0.794875023039607
+      ],
+      "spearman": [
+        0.16462168858393156,
+        0.6489422527157543
+      ],
+      "mae_pp": [
+        3.856436795420622,
+        7.439848194242715
+      ],
+      "rmse_pp": [
+        5.856599885594806,
+        11.143927558844672
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.63186004654563,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.28950872676075656,
+        "route_to_whitening_frac": 0.7777777777777778,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.59585962982388,
+            81.40086442772424
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.12477601142008743,
+            0.48713617410370885
+          ],
+          "route_to_whitening_frac": [
+            0.6666666666666666,
+            0.8888888888888888
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.49923284118917,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.422135932117218,
+        "route_to_whitening_frac": 0.6111111111111112,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.55866054913798,
+            80.93481649391791
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.2387029613139613,
+            0.6421691938511961
+          ],
+          "route_to_whitening_frac": [
+            0.46296296296296297,
+            0.7222222222222222
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.41126621119282,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5101025621135569,
+        "route_to_whitening_frac": 0.5,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.7211843287002,
+            81.05851335251623
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.2750796897111643,
+            0.786893377781245
+          ],
+          "route_to_whitening_frac": [
+            0.37037037037037035,
+            0.6296296296296297
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 74.54343544764832,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 2.377933325658066,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            69.20204074044587,
+            79.22368990375516
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.7970541072895974,
+            4.517758986478924
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "tail128_only",
+    "features": [
+      "tail128_fisher"
+    ],
+    "routing_regret_5pp": 0.5101025621135569,
+    "routing_acc_5pp": 76.41126621119282
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.49263256659161025,
+    "spearman": 0.3927196493233724,
+    "mae_pp": 6.1242369973005575,
+    "rmse_pp": 9.507383780646878,
+    "ci95": {
+      "pearson": [
+        0.2617976467017383,
+        0.7096557870525092
+      ],
+      "spearman": [
+        0.12229655040974224,
+        0.6231027253667962
+      ],
+      "mae_pp": [
+        4.306762015430874,
+        8.173976232766965
+      ],
+      "rmse_pp": [
+        6.710468600928287,
+        12.071685328304968
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.64674893543454,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.27461983787184785,
+        "route_to_whitening_frac": 0.7962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.59842961921606,
+            81.42170851210017
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.11004331447542148,
+            0.4722472852148118
+          ],
+          "route_to_whitening_frac": [
+            0.6851851851851852,
+            0.8888888888888888
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.50360321155952,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.4177655617468634,
+        "route_to_whitening_frac": 0.6296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.55876980839724,
+            80.93492575317715
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.2345828086249968,
+            0.6366924442438644
+          ],
+          "route_to_whitening_frac": [
+            0.5,
+            0.7407407407407407
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 75.47406137959855,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.4473073937078307,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.54324994570102,
+            80.53459887402731
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.39860612183547417,
+            3.2518896262065704
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 74.12228222121456,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 2.799086552091823,
+        "route_to_whitening_frac": 0.2962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            68.65602833962556,
+            79.03649831391276
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            1.1075053959901673,
+            5.070289501322604
+          ],
+          "route_to_whitening_frac": [
+            0.16666666666666666,
+            0.4074074074074074
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "tail128_only",
+    "features": [
+      "tail128_fisher"
+    ],
+    "routing_regret_5pp": 1.4473073937078307,
+    "routing_acc_5pp": 75.47406137959855
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.5681440459293805,
+    "spearman": 0.5627977892128113,
+    "mae_pp": 4.93774363774232,
+    "rmse_pp": 7.6518480323995055,
+    "ci95": {
+      "pearson": [
+        0.3799317081925828,
+        0.7696012291041036
+      ],
+      "spearman": [
+        0.33589098532490436,
+        0.7256622832093598
+      ],
+      "mae_pp": [
+        3.467873756325295,
+        6.626163693709511
+      ],
+      "rmse_pp": [
+        4.998386804374053,
+        10.072803134183003
+      ]
+    },
+    "feature_set": "tail128_only",
+    "features": [
+      "tail128_fisher"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.48189355741589857,
+    "spearman": 0.5275014293881541,
+    "mae_pp": 5.245661192681712,
+    "rmse_pp": 8.181377269170282,
+    "ci95": {
+      "pearson": [
+        0.260288819476294,
+        0.7190735092634467
+      ],
+      "spearman": [
+        0.30176100628926944,
+        0.7056622832093624
+      ],
+      "mae_pp": [
+        3.6695380167953933,
+        7.051969961730812
+      ],
+      "rmse_pp": [
+        5.424792946677766,
+        10.674918192997364
+      ]
+    },
+    "feature_set": "tail128_only",
+    "features": [
+      "tail128_fisher"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6690316311408112,
+    "spearman": 0.5733943205640584,
+    "mae_pp": 6.463593183296243,
+    "rmse_pp": 8.08532662779647,
+    "ci95": {
+      "pearson": [
+        0.5126995290408978,
+        0.7796036940432255
+      ],
+      "spearman": [
+        0.32126548503902874,
+        0.7472269868495323
+      ],
+      "mae_pp": [
+        5.223599574912217,
+        7.808543556943216
+      ],
+      "rmse_pp": [
+        6.343333079351516,
+        9.863879976584183
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.61690839109175,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.304460382214633,
+        "route_to_whitening_frac": 0.7962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.53018826603414,
+            81.40016348312001
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.12840289261141669,
+            0.5169353670401219
+          ],
+          "route_to_whitening_frac": [
+            0.6851851851851852,
+            0.9074074074074074
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.62289583342641,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.2984729398799679,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.6816414298434,
+            81.08702542718714
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.12761575680774795,
+            0.5026285646133818
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.37455010445703,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5468186688493581,
+        "route_to_whitening_frac": 0.6111111111111112,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.5617344507361,
+            81.27420092959868
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.16914872989264723,
+            1.1074005631396195
+          ],
+          "route_to_whitening_frac": [
+            0.48148148148148145,
+            0.7407407407407407
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.69359021039787,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.2277785629085214,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.37194858715777,
+            80.17178660964132
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.5480970861916499,
+            2.024067918843344
+          ],
+          "route_to_whitening_frac": [
+            0.2037037037037037,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "condition_only",
+    "features": [
+      "log10_condition"
+    ],
+    "routing_regret_5pp": 0.5468186688493581,
+    "routing_acc_5pp": 76.37455010445703
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.5809204048055238,
+    "spearman": 0.5540308747855206,
+    "mae_pp": 7.037215229902119,
+    "rmse_pp": 8.86815321230234,
+    "ci95": {
+      "pearson": [
+        0.41575056603103083,
+        0.7129803624457299
+      ],
+      "spearman": [
+        0.3109910425004365,
+        0.7289174766532321
+      ],
+      "mae_pp": [
+        5.702197664935991,
+        8.55746986989865
+      ],
+      "rmse_pp": [
+        6.929887069926443,
+        10.801300320021376
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.61690839109175,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.304460382214633,
+        "route_to_whitening_frac": 0.7962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.53018826603414,
+            81.40016348312001
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.12840289261141669,
+            0.5169353670401219
+          ],
+          "route_to_whitening_frac": [
+            0.6851851851851852,
+            0.9074074074074074
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.62289583342641,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.2984729398799679,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.6816414298434,
+            81.08702542718714
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.12761575680774795,
+            0.5026285646133818
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.3960315859385,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5253371873678803,
+        "route_to_whitening_frac": 0.6296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.58267889518054,
+            81.31632675953286
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.1523135276859816,
+            1.0833351056361578
+          ],
+          "route_to_whitening_frac": [
+            0.5,
+            0.7592592592592593
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.69359021039787,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.2277785629085214,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.37194858715777,
+            80.17178660964132
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.5480970861916499,
+            2.024067918843344
+          ],
+          "route_to_whitening_frac": [
+            0.2037037037037037,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "condition_only",
+    "features": [
+      "log10_condition"
+    ],
+    "routing_regret_5pp": 0.5253371873678803,
+    "routing_acc_5pp": 76.3960315859385
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6587043072553683,
+    "spearman": 0.6392605298264855,
+    "mae_pp": 5.380186332130567,
+    "rmse_pp": 6.995921725843297,
+    "ci95": {
+      "pearson": [
+        0.5289015663501792,
+        0.7721976877816435
+      ],
+      "spearman": [
+        0.4190070516485073,
+        0.7872327044024149
+      ],
+      "mae_pp": [
+        4.278355294794698,
+        6.655693639821444
+      ],
+      "rmse_pp": [
+        5.228203732040799,
+        8.778081655956132
+      ]
+    },
+    "feature_set": "condition_only",
+    "features": [
+      "log10_condition"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.586216721408795,
+    "spearman": 0.6210405946254205,
+    "mae_pp": 5.690543668963163,
+    "rmse_pp": 7.543124589385846,
+    "ci95": {
+      "pearson": [
+        0.4310113442101512,
+        0.7242484443221529
+      ],
+      "spearman": [
+        0.41000190585090984,
+        0.7640575566989682
+      ],
+      "mae_pp": [
+        4.475632719805056,
+        7.113426715482577
+      ],
+      "rmse_pp": [
+        5.577144871046092,
+        9.49635075901219
+      ]
+    },
+    "feature_set": "condition_only",
+    "features": [
+      "log10_condition"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8153612543186428,
+    "spearman": 0.6509243377167072,
+    "mae_pp": 5.021816699916048,
+    "rmse_pp": 6.30083056356671,
+    "ci95": {
+      "pearson": [
+        0.7256131832982381,
+        0.8834774998357922
+      ],
+      "spearman": [
+        0.4051229273870263,
+        0.7986068229463428
+      ],
+      "mae_pp": [
+        4.0555698107637745,
+        6.062955814005051
+      ],
+      "rmse_pp": [
+        5.133789637346537,
+        7.37337354530557
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.547909641248,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.37345913205839576,
+        "route_to_whitening_frac": 0.7037037037037037,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.4768090653666,
+            81.2617637962127
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.19552842082902616,
+            0.5799215841369567
+          ],
+          "route_to_whitening_frac": [
+            0.5740740740740741,
+            0.8148148148148148
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.52234027787084,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.3990284954355494,
+        "route_to_whitening_frac": 0.5555555555555556,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.52523595959354,
+            80.96515789165309
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.2072763783236392,
+            0.6136896621455216
+          ],
+          "route_to_whitening_frac": [
+            0.42592592592592593,
+            0.6851851851851852
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.61554233140954,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.3058264418968393,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.92133091953872,
+            81.28808675458995
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.1405366906886374,
+            0.5032316327293376
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 76.08551194151892,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.8358568317874737,
+        "route_to_whitening_frac": 0.3148148148148148,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.91050333053637,
+            80.47514254789408
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.3304062926727233,
+            1.5076876205460814
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.4444444444444444
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "no_tail_fisher",
+    "features": [
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.3058264418968393,
+    "routing_acc_5pp": 76.61554233140954
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7559711313079803,
+    "spearman": 0.6570992948350595,
+    "mae_pp": 5.71583806909864,
+    "rmse_pp": 7.166851396317536,
+    "ci95": {
+      "pearson": [
+        0.6597776900108697,
+        0.8410970910261074
+      ],
+      "spearman": [
+        0.4250276348389011,
+        0.7955479321516037
+      ],
+      "mae_pp": [
+        4.608988229354567,
+        6.917640269122554
+      ],
+      "rmse_pp": [
+        5.856418415218257,
+        8.40904610585577
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.54940579086296,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.37196298244343007,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.47830521498157,
+            81.26325994582766
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.1937514265996848,
+            0.5788914061191496
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.53235283553619,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.3890159377701985,
+        "route_to_whitening_frac": 0.5555555555555556,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.54666044704095,
+            80.97517044931841
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.19706881650387448,
+            0.6060870294762981
+          ],
+          "route_to_whitening_frac": [
+            0.42592592592592593,
+            0.6851851851851852
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.63243122029843,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.28893755300796187,
+        "route_to_whitening_frac": 0.4444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.93722530787456,
+            81.30497564347883
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.12435161225807567,
+            0.4912104528958832
+          ],
+          "route_to_whitening_frac": [
+            0.3148148148148148,
+            0.5740740740740741
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.84504345022535,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.07632532308104,
+        "route_to_whitening_frac": 0.2962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.50393617130983,
+            80.39584135434427
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.4086676768468714,
+            1.879045406375888
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.42592592592592593
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "no_tail_fisher",
+    "features": [
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.28893755300796187,
+    "routing_acc_5pp": 76.63243122029843
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8020605889176307,
+    "spearman": 0.6609872307984668,
+    "mae_pp": 4.236774486302683,
+    "rmse_pp": 5.556034396241831,
+    "ci95": {
+      "pearson": [
+        0.7220545067692553,
+        0.8715959832511453
+      ],
+      "spearman": [
+        0.4283514389174216,
+        0.806394129978932
+      ],
+      "mae_pp": [
+        3.324149911297795,
+        5.222251708875513
+      ],
+      "rmse_pp": [
+        4.372171901088955,
+        6.714750726683658
+      ]
+    },
+    "feature_set": "no_tail_fisher",
+    "features": [
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7402833688329123,
+    "spearman": 0.6280541261672531,
+    "mae_pp": 4.768380684870113,
+    "rmse_pp": 6.304775695924311,
+    "ci95": {
+      "pearson": [
+        0.6501864841458198,
+        0.8250598498765623
+      ],
+      "spearman": [
+        0.38890794739846346,
+        0.7758871736229229
+      ],
+      "mae_pp": [
+        3.7044832484522097,
+        5.867831849515747
+      ],
+      "rmse_pp": [
+        4.912759093315333,
+        7.645268438484921
+      ]
+    },
+    "feature_set": "no_tail_fisher",
+    "features": [
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.68244553860443,
+    "spearman": 0.5966457023060031,
+    "mae_pp": 5.187273465087334,
+    "rmse_pp": 7.988403106632584,
+    "ci95": {
+      "pearson": [
+        0.49888274963230134,
+        0.8449994106252647
+      ],
+      "spearman": [
+        0.35700019058505045,
+        0.7752277491899136
+      ],
+      "mae_pp": [
+        3.636380804153845,
+        6.932411730056974
+      ],
+      "rmse_pp": [
+        5.306691970645005,
+        10.42029545777507
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.52783790691373,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.3935308663926551,
+        "route_to_whitening_frac": 0.8333333333333334,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.39642473699936,
+            81.39877412232794
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.07620490630039223,
+            0.9408375851502869
+          ],
+          "route_to_whitening_frac": [
+            0.7222222222222222,
+            0.9259259259259259
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.38888058935636,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5324881839500306,
+        "route_to_whitening_frac": 0.6296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.26893219569924,
+            80.93629403981299
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.16013811974263853,
+            1.1226013294579975
+          ],
+          "route_to_whitening_frac": [
+            0.5,
+            0.7592592592592593
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.15658917083921,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.7647796024671694,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.28691050099054,
+            81.07756429947601
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.25085385706896335,
+            1.4411960734115656
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 73.93800896192326,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 2.983359811383124,
+        "route_to_whitening_frac": 0.2037037037037037,
+        "ci95": {
+          "mean_chosen_acc": [
+            68.33575774608842,
+            78.82379583508647
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            1.2741206524179494,
+            5.119508122113452
+          ],
+          "route_to_whitening_frac": [
+            0.11064814814814816,
+            0.3148148148148148
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "no_covariance",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.7647796024671694,
+    "routing_acc_5pp": 76.15658917083921
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6516592032068689,
+    "spearman": 0.5350485991994739,
+    "mae_pp": 5.536500876770651,
+    "rmse_pp": 8.327427070010387,
+    "ci95": {
+      "pearson": [
+        0.4367624757857155,
+        0.8308524898361767
+      ],
+      "spearman": [
+        0.28911759100434636,
+        0.7273966075851936
+      ],
+      "mae_pp": [
+        3.909002053699569,
+        7.287735273134824
+      ],
+      "rmse_pp": [
+        5.6888781359257825,
+        10.711450696705585
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.51056177930097,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.4108069940054193,
+        "route_to_whitening_frac": 0.8703703703703703,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.38502455651354,
+            81.37452599850403
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.09209070276777198,
+            0.9534460405135957
+          ],
+          "route_to_whitening_frac": [
+            0.7777777777777778,
+            0.9444444444444444
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.38436207083784,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5370067024685454,
+        "route_to_whitening_frac": 0.6481481481481481,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.2687062697733,
+            80.93618107685003
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.16201699151977833,
+            1.1271198479765228
+          ],
+          "route_to_whitening_frac": [
+            0.5185185185185185,
+            0.7777777777777778
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.15658917083921,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.7647796024671694,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.28691050099054,
+            81.07756429947601
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.25085385706896335,
+            1.4411960734115656
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 73.9609348878492,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 2.960433885457181,
+        "route_to_whitening_frac": 0.24074074074074073,
+        "ci95": {
+          "mean_chosen_acc": [
+            68.35428934642228,
+            78.86908891010326
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            1.2468361571164643,
+            5.077166605773437
+          ],
+          "route_to_whitening_frac": [
+            0.12962962962962962,
+            0.35185185185185186
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "no_covariance",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_n_train",
+      "shot_numeric"
+    ],
+    "routing_regret_5pp": 0.7647796024671694,
+    "routing_acc_5pp": 76.15658917083921
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6194848283222089,
+    "spearman": 0.6386506575185001,
+    "mae_pp": 4.695099588472875,
+    "rmse_pp": 7.362437001229412,
+    "ci95": {
+      "pearson": [
+        0.4519057186254946,
+        0.8091126857377884
+      ],
+      "spearman": [
+        0.4299790356393578,
+        0.7838784067084947
+      ],
+      "mae_pp": [
+        3.282509518898977,
+        6.331911420401597
+      ],
+      "rmse_pp": [
+        4.798577089523325,
+        9.709485579919637
+      ]
+    },
+    "feature_set": "no_covariance",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.5965509513206118,
+    "spearman": 0.5899371069181634,
+    "mae_pp": 5.0329740927315925,
+    "rmse_pp": 7.6578643483759326,
+    "ci95": {
+      "pearson": [
+        0.404108352323752,
+        0.8041247186080251
+      ],
+      "spearman": [
+        0.3688946064417289,
+        0.7463236134933288
+      ],
+      "mae_pp": [
+        3.56790885391855,
+        6.64865942368571
+      ],
+      "rmse_pp": [
+        5.1064484081241375,
+        9.95338296812615
+      ]
+    },
+    "feature_set": "no_covariance",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_n_train",
+      "shot_numeric"
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7732810839409772,
+    "spearman": 0.541452258433321,
+    "mae_pp": 5.040910141701801,
+    "rmse_pp": 6.922719858099941,
+    "ci95": {
+      "pearson": [
+        0.6628614824452167,
+        0.8650043841298742
+      ],
+      "spearman": [
+        0.2682485229654697,
+        0.7308938441012974
+      ],
+      "mae_pp": [
+        3.8485935452485607,
+        6.32994387219031
+      ],
+      "rmse_pp": [
+        5.237167374973648,
+        8.704530210379843
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.50017748412799,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.421191289178402,
+        "route_to_whitening_frac": 0.7777777777777778,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.437644682037,
+            81.22108985848494
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.2352868286477891,
+            0.6392515444695653
+          ],
+          "route_to_whitening_frac": [
+            0.6481481481481481,
+            0.8888888888888888
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.50789583342642,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.41347293987996636,
+        "route_to_whitening_frac": 0.5555555555555556,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.54536466329726,
+            80.95997435378203
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.222875856261871,
+            0.6278704102223714
+          ],
+          "route_to_whitening_frac": [
+            0.42592592592592593,
+            0.6851851851851852
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.50217839129063,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.419190382015755,
+        "route_to_whitening_frac": 0.46296296296296297,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.74254519240635,
+            81.15890339486108
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.23370794491104768,
+            0.6413892734306929
+          ],
+          "route_to_whitening_frac": [
+            0.3333333333333333,
+            0.5925925925925926
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.71359827787127,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.207770495435112,
+        "route_to_whitening_frac": 0.2962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.38560645294434,
+            80.23394466043062
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.5391161592182475,
+            2.0060954008357488
+          ],
+          "route_to_whitening_frac": [
+            0.16666666666666666,
+            0.42592592592592593
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "no_sample_regime",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank"
+    ],
+    "routing_regret_5pp": 0.419190382015755,
+    "routing_acc_5pp": 76.50217839129063
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6615673199674186,
+    "spearman": 0.5038688774537184,
+    "mae_pp": 5.827483146535477,
+    "rmse_pp": 8.216279574093797,
+    "ci95": {
+      "pearson": [
+        0.5007137385422789,
+        0.7994576055312566
+      ],
+      "spearman": [
+        0.2519839908518831,
+        0.6747951210214495
+      ],
+      "mae_pp": [
+        4.383542326880348,
+        7.427881263680044
+      ],
+      "rmse_pp": [
+        6.061440267655872,
+        10.444833938087779
+      ]
+    },
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.49565896560946,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.4257098076969279,
+        "route_to_whitening_frac": 0.7962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.42535146317397,
+            81.22108985848494
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.23925277777782333,
+            0.6462178376809615
+          ],
+          "route_to_whitening_frac": [
+            0.6851851851851852,
+            0.8888888888888888
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.51990839109175,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.40146038221464675,
+        "route_to_whitening_frac": 0.5740740740740741,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.56878915074464,
+            80.97198691144736
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.2090212947386208,
+            0.6142714048591134
+          ],
+          "route_to_whitening_frac": [
+            0.4444444444444444,
+            0.7037037037037037
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.07467420575603,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.8466945675503545,
+        "route_to_whitening_frac": 0.4444444444444444,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.11244784950964,
+            81.08327783624468
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.2791533694100054,
+            1.5691330449782943
+          ],
+          "route_to_whitening_frac": [
+            0.3148148148148148,
+            0.5740740740740741
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.01686193757058,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.9045068357358086,
+        "route_to_whitening_frac": 0.2777777777777778,
+        "ci95": {
+          "mean_chosen_acc": [
+            69.51469160749531,
+            79.67108184384702
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.687147136831203,
+            3.6093623570095557
+          ],
+          "route_to_whitening_frac": [
+            0.16666666666666666,
+            0.3888888888888889
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ],
+    "feature_set": "no_sample_regime",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank"
+    ],
+    "routing_regret_5pp": 0.8466945675503545,
+    "routing_acc_5pp": 76.07467420575603
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7345793426040848,
+    "spearman": 0.5304745568895831,
+    "mae_pp": 4.619632310891033,
+    "rmse_pp": 6.342210479609754,
+    "ci95": {
+      "pearson": [
+        0.6365324679020411,
+        0.8329299906968669
+      ],
+      "spearman": [
+        0.25312559557839326,
+        0.728930817609969
+      ],
+      "mae_pp": [
+        3.5377165305811196,
+        5.829842787436683
+      ],
+      "rmse_pp": [
+        4.717041388414989,
+        8.04014686397945
+      ]
+    },
+    "feature_set": "no_sample_regime",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank"
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.6199818578819001,
+    "spearman": 0.4611778158947378,
+    "mae_pp": 5.2743372414828755,
+    "rmse_pp": 7.404734571895691,
+    "ci95": {
+      "pearson": [
+        0.465235539359899,
+        0.7737060929929926
+      ],
+      "spearman": [
+        0.20508099866587803,
+        0.6464436821039763
+      ],
+      "mae_pp": [
+        4.010785632135761,
+        6.701430027814867
+      ],
+      "rmse_pp": [
+        5.253247401671811,
+        9.562176599425467
+      ]
+    },
+    "feature_set": "no_sample_regime",
+    "features": [
+      "tail128_fisher",
+      "tail256_fisher",
+      "bottom_half_fisher",
+      "spearman_logeig_logfisher",
+      "log10_condition",
+      "effective_rank"
+    ]
+  }
+]

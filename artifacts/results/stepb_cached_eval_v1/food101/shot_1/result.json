@@ -1,0 +1,641 @@
+{
+  "dataset": "food101",
+  "shot": "1",
+  "records": [
+    {
+      "dataset": "food101",
+      "shot": "1",
+      "seed": 0,
+      "n_train": 101,
+      "n_test": 25250,
+      "n_classes": 101,
+      "validation_split": {
+        "mode": "no_validation",
+        "reason": "class_has_less_than_2_examples"
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 0,
+        "wcos_budget": 0,
+        "ridge_budget": 0,
+        "knn_budget": 0
+      },
+      "metrics": {
+        "cos": 0.5751287128712871,
+        "centered_cos": 0.5718811881188118,
+        "euclidean_ncm": 0.580079207920792,
+        "lda_oracle": {
+          "acc": 0.580079207920792,
+          "reg": 1e-08,
+          "test_scores": {
+            "1e-08": 0.580079207920792,
+            "3e-08": 0.580079207920792,
+            "1e-07": 0.580079207920792,
+            "3e-07": 0.580079207920792,
+            "1e-06": 0.580079207920792,
+            "3e-06": 0.580079207920792,
+            "1e-05": 0.580079207920792,
+            "3e-05": 0.580079207920792,
+            "0.0001": 0.580079207920792,
+            "0.0003": 0.580079207920792,
+            "0.001": 0.580079207920792,
+            "0.003": 0.580079207920792,
+            "0.01": 0.580079207920792,
+            "0.03": 0.580079207920792,
+            "0.1": 0.580079207920792
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.580079207920792,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "wcos_oracle": {
+          "acc": 0.5620198019801981,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.5603960396039604,
+            "3e-08": 0.5603960396039604,
+            "1e-07": 0.5603960396039604,
+            "3e-07": 0.5603960396039604,
+            "1e-06": 0.5603960396039604,
+            "3e-06": 0.5603960396039604,
+            "1e-05": 0.5603960396039604,
+            "3e-05": 0.5603960396039604,
+            "0.0001": 0.5603564356435644,
+            "0.0003": 0.5603564356435644,
+            "0.001": 0.5603564356435644,
+            "0.003": 0.5604356435643565,
+            "0.01": 0.5606336633663367,
+            "0.03": 0.5610297029702971,
+            "0.1": 0.5620198019801981
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.5603564356435644,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "qda_diag_trainval": {
+          "acc": 0.580079207920792,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "ridge_trainval": {
+          "acc": 0.5603168316831684,
+          "selected": 1.0,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_cos_trainval": {
+          "acc": 0.1377821782178218,
+          "selected": 5,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.5603564356435644,
+          "selected": 1,
+          "test_scores": {
+            "1": 0.5603564356435644,
+            "3": 0.2621782178217822,
+            "5": 0.1453069306930693,
+            "10": 0.06392079207920792,
+            "20": 0.03798019801980198
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": 0.4950495049504955,
+          "lda_trainval_minus_cos": 0.4950495049504955,
+          "wcos_trainval_minus_cos": -1.4772277227722674,
+          "ridge_minus_cos": -1.4811881188118714,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.5603168316831684,
+          "cos_regret_pp": -1.4811881188118714,
+          "best_whitening_regret_pp": -1.976237623762367
+        }
+      }
+    },
+    {
+      "dataset": "food101",
+      "shot": "1",
+      "seed": 1,
+      "n_train": 101,
+      "n_test": 25250,
+      "n_classes": 101,
+      "validation_split": {
+        "mode": "no_validation",
+        "reason": "class_has_less_than_2_examples"
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 0,
+        "wcos_budget": 0,
+        "ridge_budget": 0,
+        "knn_budget": 0
+      },
+      "metrics": {
+        "cos": 0.5761188118811881,
+        "centered_cos": 0.5721584158415841,
+        "euclidean_ncm": 0.5757623762376237,
+        "lda_oracle": {
+          "acc": 0.5757623762376237,
+          "reg": 1e-08,
+          "test_scores": {
+            "1e-08": 0.5757623762376237,
+            "3e-08": 0.5757623762376237,
+            "1e-07": 0.5757623762376237,
+            "3e-07": 0.5757623762376237,
+            "1e-06": 0.5757623762376237,
+            "3e-06": 0.5757623762376237,
+            "1e-05": 0.5757623762376237,
+            "3e-05": 0.5757623762376237,
+            "0.0001": 0.5757623762376237,
+            "0.0003": 0.5757623762376237,
+            "0.001": 0.5757623762376237,
+            "0.003": 0.5757623762376237,
+            "0.01": 0.5757623762376237,
+            "0.03": 0.5757623762376237,
+            "0.1": 0.5757623762376237
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.5757623762376237,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "wcos_oracle": {
+          "acc": 0.5590099009900991,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.5568712871287129,
+            "3e-08": 0.5568712871287129,
+            "1e-07": 0.5568712871287129,
+            "3e-07": 0.5568712871287129,
+            "1e-06": 0.5568712871287129,
+            "3e-06": 0.5568712871287129,
+            "1e-05": 0.5568712871287129,
+            "3e-05": 0.5568712871287129,
+            "0.0001": 0.5568712871287129,
+            "0.0003": 0.5568712871287129,
+            "0.001": 0.556950495049505,
+            "0.003": 0.5568712871287129,
+            "0.01": 0.5572673267326733,
+            "0.03": 0.5580198019801981,
+            "0.1": 0.5590099009900991
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.5568712871287129,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "qda_diag_trainval": {
+          "acc": 0.5757623762376237,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "ridge_trainval": {
+          "acc": 0.5560792079207921,
+          "selected": 1.0,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_cos_trainval": {
+          "acc": 0.15445544554455445,
+          "selected": 5,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.5568712871287129,
+          "selected": 1,
+          "test_scores": {
+            "1": 0.5568712871287129,
+            "3": 0.24415841584158415,
+            "5": 0.14578217821782177,
+            "10": 0.06728712871287129,
+            "20": 0.02994059405940594
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -0.035643564356435675,
+          "lda_trainval_minus_cos": -0.035643564356435675,
+          "wcos_trainval_minus_cos": -1.9247524752475154,
+          "ridge_minus_cos": -2.0039603960395946,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.5560792079207921,
+          "cos_regret_pp": -2.0039603960395946,
+          "best_whitening_regret_pp": -1.968316831683159
+        }
+      }
+    },
+    {
+      "dataset": "food101",
+      "shot": "1",
+      "seed": 2,
+      "n_train": 101,
+      "n_test": 25250,
+      "n_classes": 101,
+      "validation_split": {
+        "mode": "no_validation",
+        "reason": "class_has_less_than_2_examples"
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 0,
+        "wcos_budget": 0,
+        "ridge_budget": 0,
+        "knn_budget": 0
+      },
+      "metrics": {
+        "cos": 0.5405544554455446,
+        "centered_cos": 0.5388514851485149,
+        "euclidean_ncm": 0.5411485148514852,
+        "lda_oracle": {
+          "acc": 0.5411485148514852,
+          "reg": 1e-08,
+          "test_scores": {
+            "1e-08": 0.5411485148514852,
+            "3e-08": 0.5411485148514852,
+            "1e-07": 0.5411485148514852,
+            "3e-07": 0.5411485148514852,
+            "1e-06": 0.5411485148514852,
+            "3e-06": 0.5411485148514852,
+            "1e-05": 0.5411485148514852,
+            "3e-05": 0.5411485148514852,
+            "0.0001": 0.5411485148514852,
+            "0.0003": 0.5411485148514852,
+            "0.001": 0.5411485148514852,
+            "0.003": 0.5411485148514852,
+            "0.01": 0.5411485148514852,
+            "0.03": 0.5411485148514852,
+            "0.1": 0.5411485148514852
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.5411485148514852,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "wcos_oracle": {
+          "acc": 0.5315247524752476,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.5291089108910891,
+            "3e-08": 0.5291089108910891,
+            "1e-07": 0.5291089108910891,
+            "3e-07": 0.5291089108910891,
+            "1e-06": 0.5291089108910891,
+            "3e-06": 0.5291089108910891,
+            "1e-05": 0.5291089108910891,
+            "3e-05": 0.5291089108910891,
+            "0.0001": 0.5291089108910891,
+            "0.0003": 0.5291089108910891,
+            "0.001": 0.5291089108910891,
+            "0.003": 0.5292673267326733,
+            "0.01": 0.5293069306930693,
+            "0.03": 0.5297425742574258,
+            "0.1": 0.5315247524752476
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.5291089108910891,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "qda_diag_trainval": {
+          "acc": 0.5411485148514852,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "ridge_trainval": {
+          "acc": 0.5304158415841584,
+          "selected": 1.0,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_cos_trainval": {
+          "acc": 0.11251485148514852,
+          "selected": 5,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.5291089108910891,
+          "selected": 1,
+          "test_scores": {
+            "1": 0.5291089108910891,
+            "3": 0.1847128712871287,
+            "5": 0.1059009900990099,
+            "10": 0.05691089108910891,
+            "20": 0.032594059405940595
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": 0.05940594059405946,
+          "lda_trainval_minus_cos": 0.05940594059405946,
+          "wcos_trainval_minus_cos": -1.1445544554455456,
+          "ridge_minus_cos": -1.0138613861386148,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.5304158415841584,
+          "cos_regret_pp": -1.0138613861386148,
+          "best_whitening_regret_pp": -1.0732673267326742
+        }
+      }
+    },
+    {
+      "dataset": "food101",
+      "shot": "1",
+      "seed": 3,
+      "n_train": 101,
+      "n_test": 25250,
+      "n_classes": 101,
+      "validation_split": {
+        "mode": "no_validation",
+        "reason": "class_has_less_than_2_examples"
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 0,
+        "wcos_budget": 0,
+        "ridge_budget": 0,
+        "knn_budget": 0
+      },
+      "metrics": {
+        "cos": 0.5362772277227723,
+        "centered_cos": 0.5316831683168317,
+        "euclidean_ncm": 0.533980198019802,
+        "lda_oracle": {
+          "acc": 0.533980198019802,
+          "reg": 1e-08,
+          "test_scores": {
+            "1e-08": 0.533980198019802,
+            "3e-08": 0.533980198019802,
+            "1e-07": 0.533980198019802,
+            "3e-07": 0.533980198019802,
+            "1e-06": 0.533980198019802,
+            "3e-06": 0.533980198019802,
+            "1e-05": 0.533980198019802,
+            "3e-05": 0.533980198019802,
+            "0.0001": 0.533980198019802,
+            "0.0003": 0.533980198019802,
+            "0.001": 0.533980198019802,
+            "0.003": 0.533980198019802,
+            "0.01": 0.533980198019802,
+            "0.03": 0.533980198019802,
+            "0.1": 0.533980198019802
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.533980198019802,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "wcos_oracle": {
+          "acc": 0.5211089108910891,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.5196435643564357,
+            "3e-08": 0.5196435643564357,
+            "1e-07": 0.5196435643564357,
+            "3e-07": 0.5196435643564357,
+            "1e-06": 0.5196435643564357,
+            "3e-06": 0.5196435643564357,
+            "1e-05": 0.5196435643564357,
+            "3e-05": 0.5196435643564357,
+            "0.0001": 0.5196435643564357,
+            "0.0003": 0.5196039603960396,
+            "0.001": 0.5196831683168317,
+            "0.003": 0.5198019801980198,
+            "0.01": 0.519960396039604,
+            "0.03": 0.5207128712871287,
+            "0.1": 0.5211089108910891
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.5196435643564357,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "qda_diag_trainval": {
+          "acc": 0.533980198019802,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "ridge_trainval": {
+          "acc": 0.5180594059405941,
+          "selected": 1.0,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_cos_trainval": {
+          "acc": 0.100990099009901,
+          "selected": 5,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.5196435643564357,
+          "selected": 1,
+          "test_scores": {
+            "1": 0.5196435643564357,
+            "3": 0.2013861386138614,
+            "5": 0.1078019801980198,
+            "10": 0.054455445544554455,
+            "20": 0.03231683168316832
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -0.2297029702970299,
+          "lda_trainval_minus_cos": -0.2297029702970299,
+          "wcos_trainval_minus_cos": -1.6633663366336648,
+          "ridge_minus_cos": -1.8217821782178234,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.5180594059405941,
+          "cos_regret_pp": -1.8217821782178234,
+          "best_whitening_regret_pp": -1.5920792079207935
+        }
+      }
+    },
+    {
+      "dataset": "food101",
+      "shot": "1",
+      "seed": 4,
+      "n_train": 101,
+      "n_test": 25250,
+      "n_classes": 101,
+      "validation_split": {
+        "mode": "no_validation",
+        "reason": "class_has_less_than_2_examples"
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 0,
+        "wcos_budget": 0,
+        "ridge_budget": 0,
+        "knn_budget": 0
+      },
+      "metrics": {
+        "cos": 0.5162376237623763,
+        "centered_cos": 0.5156831683168317,
+        "euclidean_ncm": 0.5173861386138614,
+        "lda_oracle": {
+          "acc": 0.5173861386138614,
+          "reg": 1e-08,
+          "test_scores": {
+            "1e-08": 0.5173861386138614,
+            "3e-08": 0.5173861386138614,
+            "1e-07": 0.5173861386138614,
+            "3e-07": 0.5173861386138614,
+            "1e-06": 0.5173861386138614,
+            "3e-06": 0.5173861386138614,
+            "1e-05": 0.5173861386138614,
+            "3e-05": 0.5173861386138614,
+            "0.0001": 0.5173861386138614,
+            "0.0003": 0.5173861386138614,
+            "0.001": 0.5173861386138614,
+            "0.003": 0.5173861386138614,
+            "0.01": 0.5173861386138614,
+            "0.03": 0.5173861386138614,
+            "0.1": 0.5173861386138614
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.5173861386138614,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "wcos_oracle": {
+          "acc": 0.5036831683168317,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.502019801980198,
+            "3e-08": 0.502019801980198,
+            "1e-07": 0.502019801980198,
+            "3e-07": 0.502019801980198,
+            "1e-06": 0.502019801980198,
+            "3e-06": 0.502019801980198,
+            "1e-05": 0.502019801980198,
+            "3e-05": 0.502019801980198,
+            "0.0001": 0.502019801980198,
+            "0.0003": 0.502019801980198,
+            "0.001": 0.5020594059405941,
+            "0.003": 0.5021782178217822,
+            "0.01": 0.5025346534653465,
+            "0.03": 0.5026534653465347,
+            "0.1": 0.5036831683168317
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.502019801980198,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "qda_diag_trainval": {
+          "acc": 0.5173861386138614,
+          "selected": 0.0001,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "ridge_trainval": {
+          "acc": 0.5034851485148515,
+          "selected": 1.0,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_cos_trainval": {
+          "acc": 0.1415049504950495,
+          "selected": 5,
+          "selection": "default_no_validation",
+          "val_scores": {},
+          "budget": 0
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.502019801980198,
+          "selected": 1,
+          "test_scores": {
+            "1": 0.502019801980198,
+            "3": 0.2165940594059406,
+            "5": 0.13544554455445545,
+            "10": 0.06752475247524753,
+            "20": 0.037267326732673266
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": 0.11485148514851495,
+          "lda_trainval_minus_cos": 0.11485148514851495,
+          "wcos_trainval_minus_cos": -1.421782178217823,
+          "ridge_minus_cos": -1.2752475247524764,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.5034851485148515,
+          "cos_regret_pp": -1.2752475247524764,
+          "best_whitening_regret_pp": -1.3900990099009913
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Reproduce the paper's numbers from the bundled result files and rerun the
+# cached-feature evaluators (CPU is enough).
+numpy>=1.24,<2
+scipy>=1.10
+pandas>=1.5
+matplotlib>=3.7
+scikit-learn>=1.2
+torch>=2.1

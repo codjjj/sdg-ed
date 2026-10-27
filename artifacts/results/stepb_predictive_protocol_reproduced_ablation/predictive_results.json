@@ -1,0 +1,1746 @@
+[
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8322118745414667,
+    "spearman": 0.6920907185057239,
+    "mae_pp": 4.653612142085519,
+    "rmse_pp": 6.044383585400525,
+    "ci95": {
+      "pearson": [
+        0.7545789291550399,
+        0.8948773440453444
+      ],
+      "spearman": [
+        0.4669716028205996,
+        0.8249094720791773
+      ],
+      "mae_pp": [
+        3.6629014931831074,
+        5.742962949491004
+      ],
+      "rmse_pp": [
+        4.674561183975286,
+        7.408628254817348
+      ]
+    },
+    "predictions": [
+      {
+        "dataset": "aircraft",
+        "shot": "1",
+        "target_pp": 3.924392439243923,
+        "pred_pp": 0.2277528919211047
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "2",
+        "target_pp": 12.985298529852995,
+        "pred_pp": 5.781263844490553
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "5",
+        "target_pp": 22.742274227422726,
+        "pred_pp": 16.28170074722891
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "10",
+        "target_pp": 29.684968496849685,
+        "pred_pp": 22.79276270494222
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "20",
+        "target_pp": 34.14941494149416,
+        "pred_pp": 17.77689531304933
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "full",
+        "target_pp": 37.62376237623763,
+        "pred_pp": 18.628605054781538
+      },
+      {
+        "dataset": "cars",
+        "shot": "1",
+        "target_pp": 0.07213033204825914,
+        "pred_pp": 2.261605170464022
+      },
+      {
+        "dataset": "cars",
+        "shot": "2",
+        "target_pp": 10.197736599925388,
+        "pred_pp": 8.59480337264433
+      },
+      {
+        "dataset": "cars",
+        "shot": "5",
+        "target_pp": 13.192389006342475,
+        "pred_pp": 23.768013677365726
+      },
+      {
+        "dataset": "cars",
+        "shot": "10",
+        "target_pp": 13.821663972142762,
+        "pred_pp": 16.210125562802677
+      },
+      {
+        "dataset": "cars",
+        "shot": "20",
+        "target_pp": 12.754632508394492,
+        "pred_pp": 15.022153843931093
+      },
+      {
+        "dataset": "cars",
+        "shot": "full",
+        "target_pp": 12.088048750155455,
+        "pred_pp": 19.669374031477133
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "1",
+        "target_pp": -1.0979999999999879,
+        "pred_pp": -4.43511652815188
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "2",
+        "target_pp": 0.9099999999999997,
+        "pred_pp": -2.2200684245892557
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "5",
+        "target_pp": 0.47400000000000775,
+        "pred_pp": -0.6559747248568897
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "10",
+        "target_pp": 0.26400000000000867,
+        "pred_pp": -0.27527348088039094
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "20",
+        "target_pp": -0.25600000000000067,
+        "pred_pp": 0.1284286610877361
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "full",
+        "target_pp": 0.770000000000004,
+        "pred_pp": 6.159935104784156
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "1",
+        "target_pp": 0.8040000000000047,
+        "pred_pp": 0.5816799831968771
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "2",
+        "target_pp": -0.13199999999998768,
+        "pred_pp": 1.1946670965950297
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "5",
+        "target_pp": -0.6820000000000048,
+        "pred_pp": 1.4480507505272087
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "10",
+        "target_pp": 0.10799999999999699,
+        "pred_pp": 1.2697127013745533
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "20",
+        "target_pp": 0.46799999999999065,
+        "pred_pp": -4.692954174170019
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "full",
+        "target_pp": 2.0299999999999985,
+        "pred_pp": -0.7184464782044451
+      },
+      {
+        "dataset": "cub200",
+        "shot": "1",
+        "target_pp": 2.4059371763893695,
+        "pred_pp": 1.9978895543447592
+      },
+      {
+        "dataset": "cub200",
+        "shot": "2",
+        "target_pp": 13.327580255436667,
+        "pred_pp": 9.171487365471137
+      },
+      {
+        "dataset": "cub200",
+        "shot": "5",
+        "target_pp": 25.108733172247145,
+        "pred_pp": 33.14533502249989
+      },
+      {
+        "dataset": "cub200",
+        "shot": "10",
+        "target_pp": 29.865377977217815,
+        "pred_pp": 25.22018632818153
+      },
+      {
+        "dataset": "cub200",
+        "shot": "20",
+        "target_pp": 31.24611667241974,
+        "pred_pp": 23.218790652304115
+      },
+      {
+        "dataset": "cub200",
+        "shot": "full",
+        "target_pp": 31.567138419054196,
+        "pred_pp": 26.042852809134466
+      },
+      {
+        "dataset": "food101",
+        "shot": "1",
+        "target_pp": 0.08079207920793641,
+        "pred_pp": 0.6681264543665053
+      },
+      {
+        "dataset": "food101",
+        "shot": "2",
+        "target_pp": 0.17108910891089346,
+        "pred_pp": 2.913040399251205
+      },
+      {
+        "dataset": "food101",
+        "shot": "5",
+        "target_pp": 0.7564356435643682,
+        "pred_pp": 8.380672182982122
+      },
+      {
+        "dataset": "food101",
+        "shot": "10",
+        "target_pp": 2.31445544554455,
+        "pred_pp": 12.485744589641113
+      },
+      {
+        "dataset": "food101",
+        "shot": "20",
+        "target_pp": 3.206336633663376,
+        "pred_pp": 8.389671915430869
+      },
+      {
+        "dataset": "food101",
+        "shot": "full",
+        "target_pp": 5.089108910891094,
+        "pred_pp": 15.36106395320294
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "1",
+        "target_pp": -0.46399999999999775,
+        "pred_pp": 0.7095299769909138
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "2",
+        "target_pp": -1.104000000000005,
+        "pred_pp": 1.435463793155506
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "5",
+        "target_pp": -1.976,
+        "pred_pp": -0.8422619375670868
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "10",
+        "target_pp": -0.43200000000001015,
+        "pred_pp": -2.3987168090091195
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "20",
+        "target_pp": 0.23599999999999177,
+        "pred_pp": -7.987102787745418
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "full",
+        "target_pp": 1.2399999999999967,
+        "pred_pp": -1.8312258047021528
+      },
+      {
+        "dataset": "pets",
+        "shot": "1",
+        "target_pp": 0.04360861270099603,
+        "pred_pp": -1.460849790493672
+      },
+      {
+        "dataset": "pets",
+        "shot": "2",
+        "target_pp": 0.6486781139275033,
+        "pred_pp": 1.183907330311289
+      },
+      {
+        "dataset": "pets",
+        "shot": "5",
+        "target_pp": 0.6922867266284993,
+        "pred_pp": 2.698690560998898
+      },
+      {
+        "dataset": "pets",
+        "shot": "10",
+        "target_pp": 0.5832651948759926,
+        "pred_pp": 3.323340653983083
+      },
+      {
+        "dataset": "pets",
+        "shot": "20",
+        "target_pp": 1.1828836195148518,
+        "pred_pp": 8.723300820348413
+      },
+      {
+        "dataset": "pets",
+        "shot": "full",
+        "target_pp": 1.8533660397928586,
+        "pred_pp": 8.900601649001514
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "1",
+        "target_pp": -0.24399999999999977,
+        "pred_pp": 3.162797767614217
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "2",
+        "target_pp": -2.2319999999999784,
+        "pred_pp": 4.592086787178221
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "5",
+        "target_pp": -0.9120000000000017,
+        "pred_pp": 7.119145519922856
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "10",
+        "target_pp": 0.07800000000000029,
+        "pred_pp": -3.4731278965337093
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "20",
+        "target_pp": 0.48399999999998444,
+        "pred_pp": -7.06461137247036
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "full",
+        "target_pp": 1.1599999999999944,
+        "pred_pp": -1.0266225163870555
+      }
+    ],
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.6729686138119,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.24840015949447736,
+        "route_to_whitening_frac": 0.7407407407407407,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.62277024448966,
+            81.34022284017647
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.12133658959449761,
+            0.39399442274108576
+          ],
+          "route_to_whitening_frac": [
+            0.6111111111111112,
+            0.8518518518518519
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.57419454327916,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.34717423002722514,
+        "route_to_whitening_frac": 0.5370370370370371,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.57339665424823,
+            81.0107812080796
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.1739932498315766,
+            0.561324455863486
+          ],
+          "route_to_whitening_frac": [
+            0.4074074074074074,
+            0.6666666666666666
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.59192099952983,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.32944777377655887,
+        "route_to_whitening_frac": 0.42592592592592593,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.89743742800114,
+            81.2630875116839
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.16536093494061266,
+            0.5307721834044128
+          ],
+          "route_to_whitening_frac": [
+            0.2962962962962963,
+            0.5555555555555556
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.7888166046826,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.1325521686237905,
+        "route_to_whitening_frac": 0.25925925925925924,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.43959390907584,
+            80.32430945782538
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.473292906157102,
+            1.9343816719076592
+          ],
+          "route_to_whitening_frac": [
+            0.14814814814814814,
+            0.37037037037037035
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "target": "target_best_whitening_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.751698752877427,
+    "spearman": 0.6782923575375533,
+    "mae_pp": 5.4550029074793445,
+    "rmse_pp": 7.2411000619950485,
+    "ci95": {
+      "pearson": [
+        0.6382836867886889,
+        0.845860787175038
+      ],
+      "spearman": [
+        0.4793844101390656,
+        0.7993005526966762
+      ],
+      "mae_pp": [
+        4.231524814808464,
+        6.78221698612855
+      ],
+      "rmse_pp": [
+        5.392099945441449,
+        9.007081320974866
+      ]
+    },
+    "predictions": [
+      {
+        "dataset": "aircraft",
+        "shot": "1",
+        "target_pp": 3.924392439243923,
+        "pred_pp": 0.695461760434029
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "2",
+        "target_pp": 12.985298529852995,
+        "pred_pp": 1.7400144598674023
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "5",
+        "target_pp": 22.742274227422726,
+        "pred_pp": 11.24701067676082
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "10",
+        "target_pp": 29.684968496849685,
+        "pred_pp": 17.222446300945922
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "20",
+        "target_pp": 34.14941494149416,
+        "pred_pp": 12.713664945522801
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "full",
+        "target_pp": 37.62376237623763,
+        "pred_pp": 13.923368857688263
+      },
+      {
+        "dataset": "cars",
+        "shot": "1",
+        "target_pp": 0.07213033204825914,
+        "pred_pp": 2.633058090027955
+      },
+      {
+        "dataset": "cars",
+        "shot": "2",
+        "target_pp": 10.197736599925388,
+        "pred_pp": 8.904751200371802
+      },
+      {
+        "dataset": "cars",
+        "shot": "5",
+        "target_pp": 13.192389006342475,
+        "pred_pp": 24.00833310083741
+      },
+      {
+        "dataset": "cars",
+        "shot": "10",
+        "target_pp": 13.821663972142762,
+        "pred_pp": 17.440832673323055
+      },
+      {
+        "dataset": "cars",
+        "shot": "20",
+        "target_pp": 12.754632508394492,
+        "pred_pp": 16.061189570208775
+      },
+      {
+        "dataset": "cars",
+        "shot": "full",
+        "target_pp": 12.088048750155455,
+        "pred_pp": 20.035401037410228
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "1",
+        "target_pp": -1.0979999999999879,
+        "pred_pp": -6.126575993288028
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "2",
+        "target_pp": 0.9099999999999997,
+        "pred_pp": -3.627924434831413
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "5",
+        "target_pp": 0.47400000000000775,
+        "pred_pp": -1.5210371941858751
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "10",
+        "target_pp": 0.26400000000000867,
+        "pred_pp": -0.523847631590213
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "20",
+        "target_pp": -0.25600000000000067,
+        "pred_pp": -0.2198344868225055
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "full",
+        "target_pp": 0.770000000000004,
+        "pred_pp": 6.679384200327536
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "1",
+        "target_pp": 0.8040000000000047,
+        "pred_pp": 0.6497020512943346
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "2",
+        "target_pp": -0.13199999999998768,
+        "pred_pp": 1.140904246567369
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "5",
+        "target_pp": -0.6820000000000048,
+        "pred_pp": 1.1209929422277414
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "10",
+        "target_pp": 0.10799999999999699,
+        "pred_pp": 0.7812835669433991
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "20",
+        "target_pp": 0.46799999999999065,
+        "pred_pp": -4.729108570691165
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "full",
+        "target_pp": 2.0299999999999985,
+        "pred_pp": -1.0024069822041843
+      },
+      {
+        "dataset": "cub200",
+        "shot": "1",
+        "target_pp": 2.4059371763893695,
+        "pred_pp": 1.741699768800955
+      },
+      {
+        "dataset": "cub200",
+        "shot": "2",
+        "target_pp": 13.327580255436667,
+        "pred_pp": 7.6461422724473955
+      },
+      {
+        "dataset": "cub200",
+        "shot": "5",
+        "target_pp": 25.108733172247145,
+        "pred_pp": 27.312741226654808
+      },
+      {
+        "dataset": "cub200",
+        "shot": "10",
+        "target_pp": 29.865377977217815,
+        "pred_pp": 23.304994674983586
+      },
+      {
+        "dataset": "cub200",
+        "shot": "20",
+        "target_pp": 31.24611667241974,
+        "pred_pp": 22.014483143801076
+      },
+      {
+        "dataset": "cub200",
+        "shot": "full",
+        "target_pp": 31.567138419054196,
+        "pred_pp": 24.75643132899512
+      },
+      {
+        "dataset": "food101",
+        "shot": "1",
+        "target_pp": 0.08079207920793641,
+        "pred_pp": 1.3659043384103544
+      },
+      {
+        "dataset": "food101",
+        "shot": "2",
+        "target_pp": 0.17108910891089346,
+        "pred_pp": 3.1581810805701576
+      },
+      {
+        "dataset": "food101",
+        "shot": "5",
+        "target_pp": 0.7564356435643682,
+        "pred_pp": 8.998524845778409
+      },
+      {
+        "dataset": "food101",
+        "shot": "10",
+        "target_pp": 2.31445544554455,
+        "pred_pp": 12.945838728323917
+      },
+      {
+        "dataset": "food101",
+        "shot": "20",
+        "target_pp": 3.206336633663376,
+        "pred_pp": 9.55004704687691
+      },
+      {
+        "dataset": "food101",
+        "shot": "full",
+        "target_pp": 5.089108910891094,
+        "pred_pp": 15.648331264138886
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "1",
+        "target_pp": -0.46399999999999775,
+        "pred_pp": 0.8430309807746754
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "2",
+        "target_pp": -1.104000000000005,
+        "pred_pp": 1.2075935525832202
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "5",
+        "target_pp": -1.976,
+        "pred_pp": -1.9548486689610298
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "10",
+        "target_pp": -0.43200000000001015,
+        "pred_pp": -3.6812801522066882
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "20",
+        "target_pp": 0.23599999999999177,
+        "pred_pp": -8.68221439956596
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "full",
+        "target_pp": 1.2399999999999967,
+        "pred_pp": -2.686695820887821
+      },
+      {
+        "dataset": "pets",
+        "shot": "1",
+        "target_pp": 0.04360861270099603,
+        "pred_pp": -1.3685326052367328
+      },
+      {
+        "dataset": "pets",
+        "shot": "2",
+        "target_pp": 0.6486781139275033,
+        "pred_pp": 2.1608603561699162
+      },
+      {
+        "dataset": "pets",
+        "shot": "5",
+        "target_pp": 0.6922867266284993,
+        "pred_pp": 4.430457421205335
+      },
+      {
+        "dataset": "pets",
+        "shot": "10",
+        "target_pp": 0.5832651948759926,
+        "pred_pp": 5.315292602156994
+      },
+      {
+        "dataset": "pets",
+        "shot": "20",
+        "target_pp": 1.1828836195148518,
+        "pred_pp": 10.83772302522901
+      },
+      {
+        "dataset": "pets",
+        "shot": "full",
+        "target_pp": 1.8533660397928586,
+        "pred_pp": 10.044082124454562
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "1",
+        "target_pp": -0.24399999999999977,
+        "pred_pp": 3.064882267785376
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "2",
+        "target_pp": -2.2319999999999784,
+        "pred_pp": 4.227031041530518
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "5",
+        "target_pp": -0.9120000000000017,
+        "pred_pp": 5.664506266951337
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "10",
+        "target_pp": 0.07800000000000029,
+        "pred_pp": -4.020968479169571
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "20",
+        "target_pp": 0.48399999999998444,
+        "pred_pp": -7.02085632863196
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "full",
+        "target_pp": 1.1599999999999944,
+        "pred_pp": -1.747843945231419
+      }
+    ],
+    "routing": [
+      {
+        "threshold": 0.0,
+        "mean_chosen_acc": 76.67770935455266,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.24365941875372776,
+        "route_to_whitening_frac": 0.7222222222222222,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.6320146889341,
+            81.34958580313942
+          ],
+          "mean_oracle_acc": [
+            71.84028310488851,
+            81.63515328675352
+          ],
+          "routing_regret_pp": [
+            0.1167840147179211,
+            0.38999385921081375
+          ],
+          "route_to_whitening_frac": [
+            0.5925925925925926,
+            0.8333333333333334
+          ]
+        }
+      },
+      {
+        "threshold": 2.0,
+        "mean_chosen_acc": 76.34573860965091,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5756301636554717,
+        "route_to_whitening_frac": 0.5370370370370371,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.21542018399941,
+            80.89816068212633
+          ],
+          "mean_oracle_acc": [
+            72.02990468490185,
+            81.3243682399827
+          ],
+          "routing_regret_pp": [
+            0.19690599955638266,
+            1.1916461204363136
+          ],
+          "route_to_whitening_frac": [
+            0.4074074074074074,
+            0.6666666666666666
+          ]
+        }
+      },
+      {
+        "threshold": 5.0,
+        "mean_chosen_acc": 76.36225371554876,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 0.5591150577576198,
+        "route_to_whitening_frac": 0.42592592592592593,
+        "ci95": {
+          "mean_chosen_acc": [
+            71.57498311051356,
+            81.16733508406739
+          ],
+          "mean_oracle_acc": [
+            72.33714282719868,
+            81.49448381078584
+          ],
+          "routing_regret_pp": [
+            0.1890240118052286,
+            1.105769394743293
+          ],
+          "route_to_whitening_frac": [
+            0.2962962962962963,
+            0.5555555555555556
+          ]
+        }
+      },
+      {
+        "threshold": 10.0,
+        "mean_chosen_acc": 75.84504345022535,
+        "mean_oracle_acc": 76.92136877330638,
+        "routing_regret_pp": 1.07632532308104,
+        "route_to_whitening_frac": 0.2962962962962963,
+        "ci95": {
+          "mean_chosen_acc": [
+            70.50393617130983,
+            80.39584135434427
+          ],
+          "mean_oracle_acc": [
+            71.97401305363026,
+            81.19287902743301
+          ],
+          "routing_regret_pp": [
+            0.4086676768468714,
+            1.879045406375888
+          ],
+          "route_to_whitening_frac": [
+            0.18518518518518517,
+            0.42592592592592593
+          ]
+        }
+      }
+    ],
+    "routing_baselines": [
+      {
+        "policy": "always cosine",
+        "mean_acc": 70.21014836623051,
+        "regret_pp": 6.71122040707588,
+        "ci95": {
+          "mean_acc": [
+            64.43164474445157,
+            75.93320067634633
+          ],
+          "regret_pp": [
+            4.051944354800394,
+            9.555142050339834
+          ]
+        }
+      },
+      {
+        "policy": "always WCos",
+        "mean_acc": 75.41661653008144,
+        "regret_pp": 1.5047522432249494,
+        "ci95": {
+          "mean_acc": [
+            70.46288046613157,
+            80.09491771401764
+          ],
+          "regret_pp": [
+            1.0097520853421424,
+            2.073151293968735
+          ]
+        }
+      },
+      {
+        "policy": "always LDA",
+        "mean_acc": 75.70837460498451,
+        "regret_pp": 1.2129941683218792,
+        "ci95": {
+          "mean_acc": [
+            70.65433997849061,
+            80.2824131610609
+          ],
+          "regret_pp": [
+            0.8292855767900956,
+            1.6488360408748948
+          ]
+        }
+      },
+      {
+        "policy": "oracle best of cosine/whitening",
+        "mean_acc": 76.92136877330638,
+        "regret_pp": 0.0,
+        "ci95": {
+          "mean_acc": [
+            71.87842624546076,
+            81.31395052270787
+          ],
+          "regret_pp": [
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_group",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.8013214473218463,
+    "spearman": 0.67257480465019,
+    "mae_pp": 4.124798691090289,
+    "rmse_pp": 5.580678346594835,
+    "ci95": {
+      "pearson": [
+        0.730470563870731,
+        0.8757161392911662
+      ],
+      "spearman": [
+        0.4591633314274233,
+        0.8094949494948456
+      ],
+      "mae_pp": [
+        3.1411526617206897,
+        5.1599024875620865
+      ],
+      "rmse_pp": [
+        4.167768040473004,
+        6.96201410712417
+      ]
+    },
+    "predictions": [
+      {
+        "dataset": "aircraft",
+        "shot": "1",
+        "target_pp": 3.7263726372637285,
+        "pred_pp": -0.7913922131293321
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "2",
+        "target_pp": 9.048904890489045,
+        "pred_pp": 5.360257313013405
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "5",
+        "target_pp": 19.68196819681968,
+        "pred_pp": 13.291458659377971
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "10",
+        "target_pp": 26.57665766576657,
+        "pred_pp": 18.622638798071975
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "20",
+        "target_pp": 31.029102910291027,
+        "pred_pp": 15.283246506737479
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "full",
+        "target_pp": 33.96339633963396,
+        "pred_pp": 15.604954667671212
+      },
+      {
+        "dataset": "cars",
+        "shot": "1",
+        "target_pp": -0.43775649794801746,
+        "pred_pp": 1.9362850015011404
+      },
+      {
+        "dataset": "cars",
+        "shot": "2",
+        "target_pp": 7.374704638726523,
+        "pred_pp": 6.634938429857436
+      },
+      {
+        "dataset": "cars",
+        "shot": "5",
+        "target_pp": 11.083198607138414,
+        "pred_pp": 19.1464125766434
+      },
+      {
+        "dataset": "cars",
+        "shot": "10",
+        "target_pp": 12.331799527421964,
+        "pred_pp": 13.398188258910121
+      },
+      {
+        "dataset": "cars",
+        "shot": "20",
+        "target_pp": 11.66521576918294,
+        "pred_pp": 13.10387259394242
+      },
+      {
+        "dataset": "cars",
+        "shot": "full",
+        "target_pp": 11.01853003357791,
+        "pred_pp": 16.11995305923343
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "1",
+        "target_pp": -3.450000000000002,
+        "pred_pp": -5.32733735661409
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "2",
+        "target_pp": -0.43999999999999817,
+        "pred_pp": -3.4389354402630214
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "5",
+        "target_pp": -0.1560000000000028,
+        "pred_pp": -2.0081492806108736
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "10",
+        "target_pp": 0.023999999999999577,
+        "pred_pp": -1.8935785399710863
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "20",
+        "target_pp": -0.2039999999999953,
+        "pred_pp": -0.38789580354349074
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "full",
+        "target_pp": 0.7800000000000029,
+        "pred_pp": 6.1859180224709105
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "1",
+        "target_pp": 0.6340000000000012,
+        "pred_pp": -0.1694880783812618
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "2",
+        "target_pp": 0.8099999999999996,
+        "pred_pp": 0.20786635718860058
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "5",
+        "target_pp": 0.7139999999999991,
+        "pred_pp": 0.7915032557322688
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "10",
+        "target_pp": 0.6060000000000021,
+        "pred_pp": 0.6164639362435107
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "20",
+        "target_pp": 0.6000000000000028,
+        "pred_pp": -3.966086618126596
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "full",
+        "target_pp": 2.0000000000000018,
+        "pred_pp": -0.11425518483311592
+      },
+      {
+        "dataset": "cub200",
+        "shot": "1",
+        "target_pp": 2.226441146013117,
+        "pred_pp": 1.0034919628218102
+      },
+      {
+        "dataset": "cub200",
+        "shot": "2",
+        "target_pp": 7.569899896444599,
+        "pred_pp": 7.434091945248458
+      },
+      {
+        "dataset": "cub200",
+        "shot": "5",
+        "target_pp": 15.536762167759747,
+        "pred_pp": 27.083217549755755
+      },
+      {
+        "dataset": "cub200",
+        "shot": "10",
+        "target_pp": 22.22989299275112,
+        "pred_pp": 20.110813975733144
+      },
+      {
+        "dataset": "cub200",
+        "shot": "20",
+        "target_pp": 25.629962029685885,
+        "pred_pp": 18.903595927830686
+      },
+      {
+        "dataset": "cub200",
+        "shot": "full",
+        "target_pp": 25.647221263375908,
+        "pred_pp": 19.76749650462252
+      },
+      {
+        "dataset": "food101",
+        "shot": "1",
+        "target_pp": -1.5192079207920761,
+        "pred_pp": 0.04280807513113327
+      },
+      {
+        "dataset": "food101",
+        "shot": "2",
+        "target_pp": -0.6780198019801965,
+        "pred_pp": 2.2969435232230517
+      },
+      {
+        "dataset": "food101",
+        "shot": "5",
+        "target_pp": -0.7350495049504957,
+        "pred_pp": 6.62951023048669
+      },
+      {
+        "dataset": "food101",
+        "shot": "10",
+        "target_pp": 1.2388118811881133,
+        "pred_pp": 9.984386043790332
+      },
+      {
+        "dataset": "food101",
+        "shot": "20",
+        "target_pp": 2.1837623762376257,
+        "pred_pp": 7.21946861151457
+      },
+      {
+        "dataset": "food101",
+        "shot": "full",
+        "target_pp": 4.102970297029707,
+        "pred_pp": 14.545567419311173
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "1",
+        "target_pp": -0.7199999999999984,
+        "pred_pp": 0.01216689260522763
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "2",
+        "target_pp": -0.8240000000000002,
+        "pred_pp": 0.8625390397963066
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "5",
+        "target_pp": -1.6840000000000033,
+        "pred_pp": -0.26385360563469185
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "10",
+        "target_pp": 0.039999999999997815,
+        "pred_pp": -1.6749074026183166
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "20",
+        "target_pp": 0.39200000000000346,
+        "pred_pp": -6.262838954055743
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "full",
+        "target_pp": 1.1399999999999966,
+        "pred_pp": -0.33491832882043493
+      },
+      {
+        "dataset": "pets",
+        "shot": "1",
+        "target_pp": -3.3088034886890165,
+        "pred_pp": -1.5954795729994817
+      },
+      {
+        "dataset": "pets",
+        "shot": "2",
+        "target_pp": -2.316707549741075,
+        "pred_pp": 0.16500324338577066
+      },
+      {
+        "dataset": "pets",
+        "shot": "5",
+        "target_pp": -0.4415372035977083,
+        "pred_pp": 1.9840035504753666
+      },
+      {
+        "dataset": "pets",
+        "shot": "10",
+        "target_pp": -0.5505587353502306,
+        "pred_pp": 3.3704018273836915
+      },
+      {
+        "dataset": "pets",
+        "shot": "20",
+        "target_pp": 0.8285636413191643,
+        "pred_pp": 8.180213315241673
+      },
+      {
+        "dataset": "pets",
+        "shot": "full",
+        "target_pp": 1.1447260834014705,
+        "pred_pp": 7.689717548508001
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "1",
+        "target_pp": -0.3540000000000032,
+        "pred_pp": 1.985414744555733
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "2",
+        "target_pp": -0.7279999999999998,
+        "pred_pp": 2.8246166110348505
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "5",
+        "target_pp": -0.24399999999999977,
+        "pred_pp": 4.685349513012298
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "10",
+        "target_pp": 0.11399999999999855,
+        "pred_pp": -3.8550249568529207
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "20",
+        "target_pp": 0.41200000000000125,
+        "pred_pp": -6.2969659659572805
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "full",
+        "target_pp": 0.9499999999999953,
+        "pred_pp": -0.5637900519651708
+      }
+    ]
+  },
+  {
+    "target": "target_ridge_minus_cos_pp",
+    "fold": "leave_one_dataset",
+    "n": 54,
+    "unit": "dataset-shot groups; non-full groups are 5-seed means",
+    "pearson": 0.7127239835811899,
+    "spearman": 0.6295025728987186,
+    "mae_pp": 4.872192072332319,
+    "rmse_pp": 6.659782209882863,
+    "ci95": {
+      "pearson": [
+        0.6038825634098619,
+        0.8284336425108182
+      ],
+      "spearman": [
+        0.41352010672760087,
+        0.7629921860109559
+      ],
+      "mae_pp": [
+        3.703944947634994,
+        6.134130263705021
+      ],
+      "rmse_pp": [
+        4.818311263679563,
+        8.452444057449606
+      ]
+    },
+    "predictions": [
+      {
+        "dataset": "aircraft",
+        "shot": "1",
+        "target_pp": 3.7263726372637285,
+        "pred_pp": -0.3901113504985405
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "2",
+        "target_pp": 9.048904890489045,
+        "pred_pp": 1.4052635189589202
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "5",
+        "target_pp": 19.68196819681968,
+        "pred_pp": 8.574315607963621
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "10",
+        "target_pp": 26.57665766576657,
+        "pred_pp": 13.424549024909762
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "20",
+        "target_pp": 31.029102910291027,
+        "pred_pp": 10.411860953145164
+      },
+      {
+        "dataset": "aircraft",
+        "shot": "full",
+        "target_pp": 33.96339633963396,
+        "pred_pp": 11.227385583126607
+      },
+      {
+        "dataset": "cars",
+        "shot": "1",
+        "target_pp": -0.43775649794801746,
+        "pred_pp": 2.1025648708935494
+      },
+      {
+        "dataset": "cars",
+        "shot": "2",
+        "target_pp": 7.374704638726523,
+        "pred_pp": 6.84790037233561
+      },
+      {
+        "dataset": "cars",
+        "shot": "5",
+        "target_pp": 11.083198607138414,
+        "pred_pp": 19.257837663377043
+      },
+      {
+        "dataset": "cars",
+        "shot": "10",
+        "target_pp": 12.331799527421964,
+        "pred_pp": 14.307777674150444
+      },
+      {
+        "dataset": "cars",
+        "shot": "20",
+        "target_pp": 11.66521576918294,
+        "pred_pp": 13.83550736134475
+      },
+      {
+        "dataset": "cars",
+        "shot": "full",
+        "target_pp": 11.01853003357791,
+        "pred_pp": 16.399714044340456
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "1",
+        "target_pp": -3.450000000000002,
+        "pred_pp": -7.119865624023251
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "2",
+        "target_pp": -0.43999999999999817,
+        "pred_pp": -4.839390385874158
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "5",
+        "target_pp": -0.1560000000000028,
+        "pred_pp": -3.0588048276976094
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "10",
+        "target_pp": 0.023999999999999577,
+        "pred_pp": -2.380972044595059
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "20",
+        "target_pp": -0.2039999999999953,
+        "pred_pp": -0.9315360847631391
+      },
+      {
+        "dataset": "cifar10",
+        "shot": "full",
+        "target_pp": 0.7800000000000029,
+        "pred_pp": 6.390420212332391
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "1",
+        "target_pp": 0.6340000000000012,
+        "pred_pp": -0.1743050341180128
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "2",
+        "target_pp": 0.8099999999999996,
+        "pred_pp": 0.18099714779653997
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "5",
+        "target_pp": 0.7139999999999991,
+        "pred_pp": 0.4671537434334363
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "10",
+        "target_pp": 0.6060000000000021,
+        "pred_pp": 0.09235667629110988
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "20",
+        "target_pp": 0.6000000000000028,
+        "pred_pp": -4.187793076462607
+      },
+      {
+        "dataset": "cifar100",
+        "shot": "full",
+        "target_pp": 2.0000000000000018,
+        "pred_pp": -0.443755051757595
+      },
+      {
+        "dataset": "cub200",
+        "shot": "1",
+        "target_pp": 2.226441146013117,
+        "pred_pp": 0.9792395402900689
+      },
+      {
+        "dataset": "cub200",
+        "shot": "2",
+        "target_pp": 7.569899896444599,
+        "pred_pp": 6.488920987582092
+      },
+      {
+        "dataset": "cub200",
+        "shot": "5",
+        "target_pp": 15.536762167759747,
+        "pred_pp": 24.52050373247474
+      },
+      {
+        "dataset": "cub200",
+        "shot": "10",
+        "target_pp": 22.22989299275112,
+        "pred_pp": 21.061964908169138
+      },
+      {
+        "dataset": "cub200",
+        "shot": "20",
+        "target_pp": 25.629962029685885,
+        "pred_pp": 20.037768950591857
+      },
+      {
+        "dataset": "cub200",
+        "shot": "full",
+        "target_pp": 25.647221263375908,
+        "pred_pp": 21.692072364709706
+      },
+      {
+        "dataset": "food101",
+        "shot": "1",
+        "target_pp": -1.5192079207920761,
+        "pred_pp": 0.7253203281840443
+      },
+      {
+        "dataset": "food101",
+        "shot": "2",
+        "target_pp": -0.6780198019801965,
+        "pred_pp": 2.5437724007505063
+      },
+      {
+        "dataset": "food101",
+        "shot": "5",
+        "target_pp": -0.7350495049504957,
+        "pred_pp": 7.224909145662565
+      },
+      {
+        "dataset": "food101",
+        "shot": "10",
+        "target_pp": 1.2388118811881133,
+        "pred_pp": 10.438332991952393
+      },
+      {
+        "dataset": "food101",
+        "shot": "20",
+        "target_pp": 2.1837623762376257,
+        "pred_pp": 8.34450796490935
+      },
+      {
+        "dataset": "food101",
+        "shot": "full",
+        "target_pp": 4.102970297029707,
+        "pred_pp": 14.85119345640798
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "1",
+        "target_pp": -0.7199999999999984,
+        "pred_pp": 0.12733038063440905
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "2",
+        "target_pp": -0.8240000000000002,
+        "pred_pp": 0.6919878349343875
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "5",
+        "target_pp": -1.6840000000000033,
+        "pred_pp": -1.1746209595004524
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "10",
+        "target_pp": 0.039999999999997815,
+        "pred_pp": -2.6253292165046194
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "20",
+        "target_pp": 0.39200000000000346,
+        "pred_pp": -6.7135302189483905
+      },
+      {
+        "dataset": "imagenet100",
+        "shot": "full",
+        "target_pp": 1.1399999999999966,
+        "pred_pp": -1.028547863431326
+      },
+      {
+        "dataset": "pets",
+        "shot": "1",
+        "target_pp": -3.3088034886890165,
+        "pred_pp": -1.42028501246073
+      },
+      {
+        "dataset": "pets",
+        "shot": "2",
+        "target_pp": -2.316707549741075,
+        "pred_pp": 1.2854019968030501
+      },
+      {
+        "dataset": "pets",
+        "shot": "5",
+        "target_pp": -0.4415372035977083,
+        "pred_pp": 3.915860737236117
+      },
+      {
+        "dataset": "pets",
+        "shot": "10",
+        "target_pp": -0.5505587353502306,
+        "pred_pp": 5.547707999159316
+      },
+      {
+        "dataset": "pets",
+        "shot": "20",
+        "target_pp": 0.8285636413191643,
+        "pred_pp": 10.501715581755118
+      },
+      {
+        "dataset": "pets",
+        "shot": "full",
+        "target_pp": 1.1447260834014705,
+        "pred_pp": 9.187451336614778
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "1",
+        "target_pp": -0.3540000000000032,
+        "pred_pp": 1.6031538836615358
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "2",
+        "target_pp": -0.7279999999999998,
+        "pred_pp": 2.1329058917135244
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "5",
+        "target_pp": -0.24399999999999977,
+        "pred_pp": 2.970461894632778
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "10",
+        "target_pp": 0.11399999999999855,
+        "pred_pp": -5.111936708540747
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "20",
+        "target_pp": 0.41200000000000125,
+        "pred_pp": -7.1680718065029785
+      },
+      {
+        "dataset": "tiny_imagenet",
+        "shot": "full",
+        "target_pp": 0.9499999999999953,
+        "pred_pp": -1.9869136535138372
+      }
+    ]
+  }
+]

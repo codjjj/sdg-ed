@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "kind": "sdg_caev_simplecil_fulldata_evaluator_preregistration",
+  "frozen_before_result_reveal": true,
+  "scientific_scope": "matched evaluator diagnostic within canonical DINOv2-B CLS CUB-200 full-data SimpleCIL; not a new CIL method or leaderboard claim",
+  "source": {
+    "result_root": "output root of src/sdg_simplecil_matched.py (canonical feature run)",
+    "result_sha256": "b23daf14602acc6ad7f13ce99dfc3353e6d4ad15db40319fba0f650e80452d9c",
+    "cache_file": "canonical_cls_features.pt",
+    "cache_bytes": 37037360,
+    "cache_sha256": "56b81d908ff3a0656368d65da1ce78662e63f9d14f0f17bc2ada11e7c7776ecf",
+    "image_manifest_sha256": "c05486f94148c02840b7c4e6922b0b0b1ee35b7d39452e803380009b66626ce0",
+    "model_repo": "facebook/dinov2-base",
+    "model_revision": "f9e44c814b77203eaa57a6bdbbd535f21ede1415",
+    "processor": "official AutoImageProcessor",
+    "feature_token": "last_hidden_state[:,0]",
+    "feature_dtype_on_disk": "float32"
+  },
+  "schedule": {
+    "dataset": "CUB_200_2011 official train/test",
+    "num_classes": 200,
+    "num_tasks": 10,
+    "classes_per_task": 20,
+    "class_order_rule": "random.Random(seed).shuffle(range(200)); task_i=order[i::10]",
+    "published_reproduction_seeds": [
+      0,
+      1,
+      2
+    ],
+    "sensitivity_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "prediction_domain": "all and only classes seen through the current session",
+    "query_inventory": "official test examples belonging to currently seen classes"
+  },
+  "methods": {
+    "cos": "L2-normalized query dot L2-normalized arithmetic class mean",
+    "wcos": "total-covariance whitening followed by cosine NCM",
+    "lda": "equal-prior shared pooled-within-covariance LDA with arithmetic class means"
+  },
+  "train_only_selection": {
+    "candidate_grid": [
+      1e-08,
+      3e-08,
+      1e-07,
+      3e-07,
+      1e-06,
+      3e-06,
+      1e-05,
+      3e-05,
+      0.0001,
+      0.0003,
+      0.001,
+      0.003,
+      0.01,
+      0.03,
+      0.1
+    ],
+    "regularization_mode": "absolute",
+    "split_rule": "within each class, rank official train paths by sha256('sdg-caev-simplecil-fulldata-evaluator-v1\\0'+label+'\\0'+path); hold out round(0.2*n), capped at 50 and clamped to [1,n-1]",
+    "split_stability": "one fixed per-class split shared by every session, class-order seed, and evaluator",
+    "selection_data": "inner-train and validation features from currently seen classes only",
+    "tie_rule": "first maximum in ascending candidate grid",
+    "refit": "after selection, refit means and covariance on all official train features of currently seen classes",
+    "test_access": "none; test labels are used only after predictions are frozen"
+  },
+  "covariance_update": {
+    "wcos": "recompute total mean/covariance from all currently seen official train features at every session",
+    "lda": "recompute pooled within-class covariance from all currently seen official train features at every session",
+    "numerics": "float64 evaluator arithmetic with finite-value checks"
+  },
+  "memory_assumption": {
+    "retains_historical_train_features": true,
+    "retains_only_sufficient_statistics": false,
+    "declared_reason": "evaluator-only diagnostic reuses the immutable 5994x768 canonical feature cache; it is not an exemplar-free or memory-matched SimpleCIL system claim"
+  },
+  "reporting": {
+    "session_metric": "overall accuracy over official test examples from currently seen classes",
+    "average_accuracy": "arithmetic mean of ten session accuracies",
+    "final_accuracy": "overall accuracy in session 9 over all 200 classes",
+    "base_novel_split": "not reported because the standard 10-task full-data schedule has no FSCIL base/novel role",
+    "paired_differences": [
+      "wcos_minus_cos",
+      "lda_minus_cos"
+    ],
+    "confidence_interval": "two-sided Student-t 95% interval over the 20 paired class-order seeds",
+    "sign_counts": "positive/negative/boundary with boundary tolerance 1e-12",
+    "negative_and_early_sessions": "retain all"
+  }
+}

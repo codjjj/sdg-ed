@@ -1,0 +1,42 @@
+{
+  "block": "coarse_ood4",
+  "rows": [
+    {
+      "dataset": "mnist",
+      "groups": 6,
+      "target_mean_pp": 8.288999999999998,
+      "prediction_mean_pp": 5.674566174364965,
+      "mae_pp": 5.18702732267791,
+      "router_regret_pp": 3.7436666666666674
+    },
+    {
+      "dataset": "fashion_mnist",
+      "groups": 6,
+      "target_mean_pp": 4.069333333333337,
+      "prediction_mean_pp": 4.692205528486302,
+      "mae_pp": 3.0107449469975216,
+      "router_regret_pp": 1.3340000000000038
+    },
+    {
+      "dataset": "svhn",
+      "groups": 6,
+      "target_mean_pp": 7.257093833230896,
+      "prediction_mean_pp": 5.50983697741002,
+      "mae_pp": 1.7472568558208748,
+      "router_regret_pp": 1.0644591272280264
+    },
+    {
+      "dataset": "gtsrb",
+      "groups": 6,
+      "target_mean_pp": 14.084718923198734,
+      "prediction_mean_pp": 11.828767148948115,
+      "mae_pp": 3.5323468628209755,
+      "router_regret_pp": 1.2802850356294542
+    }
+  ],
+  "block_regret_pp": {
+    "router": 1.8556027073810382,
+    "always_wcos": 1.013590561013241,
+    "always_lda": 0.5489059689088023
+  }
+}

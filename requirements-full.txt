@@ -1,0 +1,11 @@
+# Everything in requirements.txt plus feature extraction, the GPU analyses
+# (ImageNet-1K study, adaptation, class-incremental runs, unseen-dataset
+# preparation) and the test suite.
+-r requirements.txt
+torchvision>=0.16
+transformers>=4.45,<5
+huggingface_hub>=0.23
+datasets>=3.0,<4
+pyarrow>=15,<18
+Pillow>=10
+pytest>=7

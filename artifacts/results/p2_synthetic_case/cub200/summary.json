@@ -1,0 +1,116 @@
+{
+  "dataset": "cub200",
+  "source": "existing Spectral-Bottleneck PartA/PartC/PartD artifacts",
+  "prototype_cosine_mean": 0.9426251310110092,
+  "prototype_cosine_min": 0.807888388633728,
+  "variance_ratio": {
+    "top10_mean": 0.8820474028851775,
+    "top50_mean": 0.9288890300521944,
+    "bottom50_mean": 4.469907937582822,
+    "bottom10_mean": 5.374503248802172,
+    "overall_mean": 1.9410972577257668
+  },
+  "mlp_direction_alignment": {
+    "top10_eff_dirs_high_pca_energy": 0.19238718345665545,
+    "top10_eff_dirs_low_pca_energy": 0.025573472231823907,
+    "top10_eff_dirs_mid_pca_energy": 0.7820393443115206
+  },
+  "feature_classifier_matrix": {
+    "real": {
+      "cosine": 0.5912232398986816,
+      "mahalanobis": 0.8130615065653075,
+      "fecam": 0.6067726330338632,
+      "whitened_cosine": 0.813752591568763,
+      "logistic": 0.7957843814789219,
+      "MLP": 0.8448514342308044
+    },
+    "gaussian": {
+      "cosine": 0.566344141960144,
+      "mahalanobis": 0.8078783690393918,
+      "fecam": 0.5970974429854872,
+      "whitened_cosine": 0.8092605390463027,
+      "logistic": 0.678991015894955,
+      "MLP": 0.7487906217575073
+    },
+    "synthetic": {
+      "cosine": 0.3362128436565399,
+      "mahalanobis": 0.14478230822391155,
+      "fecam": 0.43849343469246715,
+      "whitened_cosine": 0.18797512093987562,
+      "logistic": 0.48168624740843125,
+      "MLP": 0.4948168694972992
+    },
+    "wiener": {
+      "cosine": 0.4713199734687805,
+      "mahalanobis": 0.6375259156876296,
+      "fecam": 0.5304077401520387,
+      "whitened_cosine": 0.6696613683483068,
+      "logistic": 0.730822391154112,
+      "MLP": 0.792328953742981
+    }
+  },
+  "dit_refiner": {
+    "baselines": {
+      "NCM_real": 0.5912232398986816,
+      "NCM_synthetic": 0.3362128436565399
+    },
+    "refiner_t0.05": {
+      "cosine_NCM": 0.5863856077194214,
+      "mahal_NCM": 0.5428472702142364,
+      "MLP": 0.5421561598777771
+    },
+    "refiner_t0.1": {
+      "cosine_NCM": 0.5888044238090515,
+      "mahal_NCM": 0.23427781617138907,
+      "MLP": 0.5321354269981384
+    },
+    "refiner_t0.2": {
+      "cosine_NCM": 0.5798203349113464,
+      "mahal_NCM": 0.061506565307532825,
+      "MLP": 0.5103662610054016
+    },
+    "refiner_t0.3": {
+      "cosine_NCM": 0.5711817741394043,
+      "mahal_NCM": 0.0414651002073255,
+      "MLP": 0.4733932316303253
+    },
+    "refiner_t0.5": {
+      "cosine_NCM": 0.5359364151954651,
+      "mahal_NCM": 0.028334485141672427,
+      "MLP": 0.4754664897918701
+    }
+  },
+  "causal": {
+    "tail128_alpha5": {
+      "cosine": 0.5694540143013,
+      "mahalanobis": 0.11782999308914996,
+      "fecam": 0.5932964754664823,
+      "whitened_cosine": 0.195922598479613,
+      "logistic": 0.6758811333794057
+    },
+    "aggressive_correction": {
+      "cosine": 0.536281943321228,
+      "mahalanobis": 0.7677954388389772,
+      "fecam": 0.5694540428472702,
+      "whitened_cosine": 0.7791983413959918,
+      "logistic": 0.7318590186592951
+    },
+    "mean_cov_swap": {
+      "\u03bc_real + \u03a3_real": 0.8130615065653075,
+      "\u03bc_syn + \u03a3_real": 0.14478230822391155,
+      "\u03bc_gauss + \u03a3_real": 0.8078783690393918,
+      "\u03bc_real + \u03a3_syn": 0.7906012439530062,
+      "\u03bc_syn + \u03a3_syn": 0.417069799585349,
+      "\u03bc_real + \u03a3_gauss": 0.364201796821009,
+      "\u03bc_gauss + \u03a3_gauss": 0.39426399447132
+    },
+    "fisher_analysis": {
+      "fisher_top50_mean": 16.868429511842248,
+      "fisher_bottom50_mean": 0.6875222729065484,
+      "fisher_tail_mean_128_768": 1.196097077709288,
+      "inflation_where_high_fisher": 1.2095267503018226,
+      "inflation_where_low_fisher": 2.672667765149711,
+      "pct_high_fisher_AND_inflated": 0.015625
+    }
+  }
+}

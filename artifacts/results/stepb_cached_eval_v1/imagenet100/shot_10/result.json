@@ -1,0 +1,1006 @@
+{
+  "dataset": "imagenet100",
+  "shot": "10",
+  "records": [
+    {
+      "dataset": "imagenet100",
+      "shot": "10",
+      "seed": 0,
+      "n_train": 1000,
+      "n_test": 5000,
+      "n_classes": 100,
+      "validation_split": {
+        "mode": "class_balanced_holdout",
+        "val_per_class_cap": 50,
+        "val_frac": 0.2,
+        "n_inner_train": 800,
+        "n_val": 200
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 15,
+        "wcos_budget": 15,
+        "ridge_budget": 15,
+        "knn_budget": 5
+      },
+      "metrics": {
+        "cos": 0.913,
+        "centered_cos": 0.9122,
+        "euclidean_ncm": 0.895,
+        "lda_oracle": {
+          "acc": 0.901,
+          "reg": 0.1,
+          "test_scores": {
+            "1e-08": 0.8578,
+            "3e-08": 0.8578,
+            "1e-07": 0.8578,
+            "3e-07": 0.8578,
+            "1e-06": 0.8578,
+            "3e-06": 0.8578,
+            "1e-05": 0.858,
+            "3e-05": 0.8584,
+            "0.0001": 0.8598,
+            "0.0003": 0.8626,
+            "0.001": 0.872,
+            "0.003": 0.8796,
+            "0.01": 0.8904,
+            "0.03": 0.8958,
+            "0.1": 0.901
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.8958,
+          "selected": 0.03,
+          "selection": "lda_validation",
+          "val_scores": {
+            "1e-08": 0.805,
+            "3e-08": 0.805,
+            "1e-07": 0.805,
+            "3e-07": 0.805,
+            "1e-06": 0.805,
+            "3e-06": 0.805,
+            "1e-05": 0.805,
+            "3e-05": 0.81,
+            "0.0001": 0.815,
+            "0.0003": 0.82,
+            "0.001": 0.855,
+            "0.003": 0.885,
+            "0.01": 0.895,
+            "0.03": 0.915,
+            "0.1": 0.91
+          },
+          "budget": 15
+        },
+        "wcos_oracle": {
+          "acc": 0.91,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.8634,
+            "3e-08": 0.8634,
+            "1e-07": 0.8634,
+            "3e-07": 0.8634,
+            "1e-06": 0.8634,
+            "3e-06": 0.8634,
+            "1e-05": 0.8634,
+            "3e-05": 0.8634,
+            "0.0001": 0.8646,
+            "0.0003": 0.867,
+            "0.001": 0.8718,
+            "0.003": 0.8818,
+            "0.01": 0.8932,
+            "0.03": 0.9022,
+            "0.1": 0.91
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.91,
+          "selected": 0.1,
+          "selection": "wcos_validation",
+          "val_scores": {
+            "1e-08": 0.635,
+            "3e-08": 0.635,
+            "1e-07": 0.635,
+            "3e-07": 0.635,
+            "1e-06": 0.635,
+            "3e-06": 0.64,
+            "1e-05": 0.66,
+            "3e-05": 0.675,
+            "0.0001": 0.73,
+            "0.0003": 0.795,
+            "0.001": 0.825,
+            "0.003": 0.875,
+            "0.01": 0.895,
+            "0.03": 0.9,
+            "0.1": 0.92
+          },
+          "budget": 15
+        },
+        "qda_diag_trainval": {
+          "acc": 0.8696,
+          "selected": 0.1,
+          "selection": "qda_diag_validation",
+          "val_scores": {
+            "1e-08": 0.83,
+            "3e-08": 0.83,
+            "1e-07": 0.83,
+            "3e-07": 0.83,
+            "1e-06": 0.83,
+            "3e-06": 0.83,
+            "1e-05": 0.83,
+            "3e-05": 0.83,
+            "0.0001": 0.83,
+            "0.0003": 0.83,
+            "0.001": 0.83,
+            "0.003": 0.83,
+            "0.01": 0.84,
+            "0.03": 0.86,
+            "0.1": 0.88
+          },
+          "budget": 15
+        },
+        "ridge_trainval": {
+          "acc": 0.9136,
+          "selected": 300.0,
+          "selection": "ridge_validation",
+          "val_scores": {
+            "0.0001": 0.635,
+            "0.0003": 0.635,
+            "0.001": 0.635,
+            "0.003": 0.645,
+            "0.01": 0.66,
+            "0.03": 0.67,
+            "0.1": 0.73,
+            "0.3": 0.795,
+            "1.0": 0.83,
+            "3.0": 0.875,
+            "10.0": 0.895,
+            "30.0": 0.9,
+            "100.0": 0.92,
+            "300.0": 0.935,
+            "1000.0": 0.935
+          },
+          "budget": 15
+        },
+        "knn_cos_trainval": {
+          "acc": 0.8994,
+          "selected": 3,
+          "selection": "knn_cosine_validation",
+          "val_scores": {
+            "1": 0.91,
+            "3": 0.93,
+            "5": 0.93,
+            "10": 0.92,
+            "20": 0.87
+          },
+          "budget": 5
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.8682,
+          "selected": 10,
+          "test_scores": {
+            "1": 0.8462,
+            "3": 0.8362,
+            "5": 0.8522,
+            "10": 0.8682,
+            "20": 0.862
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -1.200000000000001,
+          "lda_trainval_minus_cos": -1.7199999999999993,
+          "wcos_trainval_minus_cos": -0.30000000000000027,
+          "ridge_minus_cos": 0.05999999999999339,
+          "oracle_minus_trainval_lda": 0.5199999999999982
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.9136,
+          "cos_regret_pp": 0.05999999999999339,
+          "best_whitening_regret_pp": 0.35999999999999366
+        }
+      }
+    },
+    {
+      "dataset": "imagenet100",
+      "shot": "10",
+      "seed": 1,
+      "n_train": 1000,
+      "n_test": 5000,
+      "n_classes": 100,
+      "validation_split": {
+        "mode": "class_balanced_holdout",
+        "val_per_class_cap": 50,
+        "val_frac": 0.2,
+        "n_inner_train": 800,
+        "n_val": 200
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 15,
+        "wcos_budget": 15,
+        "ridge_budget": 15,
+        "knn_budget": 5
+      },
+      "metrics": {
+        "cos": 0.9112,
+        "centered_cos": 0.9108,
+        "euclidean_ncm": 0.8842,
+        "lda_oracle": {
+          "acc": 0.8972,
+          "reg": 0.1,
+          "test_scores": {
+            "1e-08": 0.8484,
+            "3e-08": 0.8484,
+            "1e-07": 0.8484,
+            "3e-07": 0.8484,
+            "1e-06": 0.8484,
+            "3e-06": 0.8486,
+            "1e-05": 0.8486,
+            "3e-05": 0.8484,
+            "0.0001": 0.8502,
+            "0.0003": 0.8532,
+            "0.001": 0.8598,
+            "0.003": 0.8696,
+            "0.01": 0.8806,
+            "0.03": 0.89,
+            "0.1": 0.8972
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.8972,
+          "selected": 0.1,
+          "selection": "lda_validation",
+          "val_scores": {
+            "1e-08": 0.835,
+            "3e-08": 0.835,
+            "1e-07": 0.835,
+            "3e-07": 0.835,
+            "1e-06": 0.835,
+            "3e-06": 0.835,
+            "1e-05": 0.84,
+            "3e-05": 0.84,
+            "0.0001": 0.845,
+            "0.0003": 0.845,
+            "0.001": 0.86,
+            "0.003": 0.895,
+            "0.01": 0.9,
+            "0.03": 0.9,
+            "0.1": 0.905
+          },
+          "budget": 15
+        },
+        "wcos_oracle": {
+          "acc": 0.9084,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.8522,
+            "3e-08": 0.8522,
+            "1e-07": 0.8522,
+            "3e-07": 0.8522,
+            "1e-06": 0.8522,
+            "3e-06": 0.8526,
+            "1e-05": 0.8526,
+            "3e-05": 0.8526,
+            "0.0001": 0.8538,
+            "0.0003": 0.856,
+            "0.001": 0.8602,
+            "0.003": 0.87,
+            "0.01": 0.8858,
+            "0.03": 0.8994,
+            "0.1": 0.9084
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.9084,
+          "selected": 0.1,
+          "selection": "wcos_validation",
+          "val_scores": {
+            "1e-08": 0.67,
+            "3e-08": 0.67,
+            "1e-07": 0.67,
+            "3e-07": 0.67,
+            "1e-06": 0.675,
+            "3e-06": 0.68,
+            "1e-05": 0.69,
+            "3e-05": 0.695,
+            "0.0001": 0.745,
+            "0.0003": 0.785,
+            "0.001": 0.825,
+            "0.003": 0.875,
+            "0.01": 0.895,
+            "0.03": 0.9,
+            "0.1": 0.925
+          },
+          "budget": 15
+        },
+        "qda_diag_trainval": {
+          "acc": 0.8558,
+          "selected": 0.1,
+          "selection": "qda_diag_validation",
+          "val_scores": {
+            "1e-08": 0.79,
+            "3e-08": 0.79,
+            "1e-07": 0.79,
+            "3e-07": 0.79,
+            "1e-06": 0.79,
+            "3e-06": 0.79,
+            "1e-05": 0.79,
+            "3e-05": 0.79,
+            "0.0001": 0.79,
+            "0.0003": 0.79,
+            "0.001": 0.79,
+            "0.003": 0.795,
+            "0.01": 0.8,
+            "0.03": 0.84,
+            "0.1": 0.865
+          },
+          "budget": 15
+        },
+        "ridge_trainval": {
+          "acc": 0.911,
+          "selected": 1000.0,
+          "selection": "ridge_validation",
+          "val_scores": {
+            "0.0001": 0.67,
+            "0.0003": 0.67,
+            "0.001": 0.67,
+            "0.003": 0.685,
+            "0.01": 0.69,
+            "0.03": 0.695,
+            "0.1": 0.74,
+            "0.3": 0.79,
+            "1.0": 0.825,
+            "3.0": 0.875,
+            "10.0": 0.89,
+            "30.0": 0.905,
+            "100.0": 0.925,
+            "300.0": 0.925,
+            "1000.0": 0.945
+          },
+          "budget": 15
+        },
+        "knn_cos_trainval": {
+          "acc": 0.892,
+          "selected": 3,
+          "selection": "knn_cosine_validation",
+          "val_scores": {
+            "1": 0.905,
+            "3": 0.925,
+            "5": 0.925,
+            "10": 0.895,
+            "20": 0.83
+          },
+          "budget": 5
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.8682,
+          "selected": 20,
+          "test_scores": {
+            "1": 0.8404,
+            "3": 0.8406,
+            "5": 0.8558,
+            "10": 0.8646,
+            "20": 0.8682
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -1.4000000000000012,
+          "lda_trainval_minus_cos": -1.4000000000000012,
+          "wcos_trainval_minus_cos": -0.28000000000000247,
+          "ridge_minus_cos": -0.019999999999997797,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.911,
+          "cos_regret_pp": -0.019999999999997797,
+          "best_whitening_regret_pp": 0.26000000000000467
+        }
+      }
+    },
+    {
+      "dataset": "imagenet100",
+      "shot": "10",
+      "seed": 2,
+      "n_train": 1000,
+      "n_test": 5000,
+      "n_classes": 100,
+      "validation_split": {
+        "mode": "class_balanced_holdout",
+        "val_per_class_cap": 50,
+        "val_frac": 0.2,
+        "n_inner_train": 800,
+        "n_val": 200
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 15,
+        "wcos_budget": 15,
+        "ridge_budget": 15,
+        "knn_budget": 5
+      },
+      "metrics": {
+        "cos": 0.9224,
+        "centered_cos": 0.9212,
+        "euclidean_ncm": 0.8946,
+        "lda_oracle": {
+          "acc": 0.9014,
+          "reg": 0.1,
+          "test_scores": {
+            "1e-08": 0.8568,
+            "3e-08": 0.8568,
+            "1e-07": 0.8568,
+            "3e-07": 0.8568,
+            "1e-06": 0.8568,
+            "3e-06": 0.8572,
+            "1e-05": 0.8574,
+            "3e-05": 0.858,
+            "0.0001": 0.8584,
+            "0.0003": 0.861,
+            "0.001": 0.8666,
+            "0.003": 0.8788,
+            "0.01": 0.8884,
+            "0.03": 0.8952,
+            "0.1": 0.9014
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.9014,
+          "selected": 0.1,
+          "selection": "lda_validation",
+          "val_scores": {
+            "1e-08": 0.85,
+            "3e-08": 0.85,
+            "1e-07": 0.85,
+            "3e-07": 0.85,
+            "1e-06": 0.85,
+            "3e-06": 0.85,
+            "1e-05": 0.85,
+            "3e-05": 0.85,
+            "0.0001": 0.85,
+            "0.0003": 0.87,
+            "0.001": 0.87,
+            "0.003": 0.88,
+            "0.01": 0.89,
+            "0.03": 0.89,
+            "0.1": 0.895
+          },
+          "budget": 15
+        },
+        "wcos_oracle": {
+          "acc": 0.9168,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.8688,
+            "3e-08": 0.8688,
+            "1e-07": 0.8688,
+            "3e-07": 0.8688,
+            "1e-06": 0.8688,
+            "3e-06": 0.8688,
+            "1e-05": 0.869,
+            "3e-05": 0.869,
+            "0.0001": 0.87,
+            "0.0003": 0.8712,
+            "0.001": 0.8746,
+            "0.003": 0.8836,
+            "0.01": 0.8962,
+            "0.03": 0.906,
+            "0.1": 0.9168
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.9168,
+          "selected": 0.1,
+          "selection": "wcos_validation",
+          "val_scores": {
+            "1e-08": 0.715,
+            "3e-08": 0.715,
+            "1e-07": 0.715,
+            "3e-07": 0.715,
+            "1e-06": 0.715,
+            "3e-06": 0.715,
+            "1e-05": 0.73,
+            "3e-05": 0.74,
+            "0.0001": 0.78,
+            "0.0003": 0.825,
+            "0.001": 0.855,
+            "0.003": 0.875,
+            "0.01": 0.89,
+            "0.03": 0.905,
+            "0.1": 0.915
+          },
+          "budget": 15
+        },
+        "qda_diag_trainval": {
+          "acc": 0.8614,
+          "selected": 0.1,
+          "selection": "qda_diag_validation",
+          "val_scores": {
+            "1e-08": 0.815,
+            "3e-08": 0.815,
+            "1e-07": 0.815,
+            "3e-07": 0.815,
+            "1e-06": 0.815,
+            "3e-06": 0.815,
+            "1e-05": 0.815,
+            "3e-05": 0.815,
+            "0.0001": 0.815,
+            "0.0003": 0.815,
+            "0.001": 0.815,
+            "0.003": 0.825,
+            "0.01": 0.835,
+            "0.03": 0.845,
+            "0.1": 0.865
+          },
+          "budget": 15
+        },
+        "ridge_trainval": {
+          "acc": 0.92,
+          "selected": 300.0,
+          "selection": "ridge_validation",
+          "val_scores": {
+            "0.0001": 0.715,
+            "0.0003": 0.715,
+            "0.001": 0.715,
+            "0.003": 0.715,
+            "0.01": 0.735,
+            "0.03": 0.74,
+            "0.1": 0.775,
+            "0.3": 0.825,
+            "1.0": 0.855,
+            "3.0": 0.88,
+            "10.0": 0.89,
+            "30.0": 0.905,
+            "100.0": 0.905,
+            "300.0": 0.915,
+            "1000.0": 0.9
+          },
+          "budget": 15
+        },
+        "knn_cos_trainval": {
+          "acc": 0.8962,
+          "selected": 10,
+          "selection": "knn_cosine_validation",
+          "val_scores": {
+            "1": 0.895,
+            "3": 0.88,
+            "5": 0.895,
+            "10": 0.9,
+            "20": 0.815
+          },
+          "budget": 5
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.876,
+          "selected": 10,
+          "test_scores": {
+            "1": 0.8424,
+            "3": 0.8436,
+            "5": 0.8618,
+            "10": 0.876,
+            "20": 0.8732
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -2.100000000000002,
+          "lda_trainval_minus_cos": -2.100000000000002,
+          "wcos_trainval_minus_cos": -0.5600000000000049,
+          "ridge_minus_cos": -0.23999999999999577,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.92,
+          "cos_regret_pp": -0.23999999999999577,
+          "best_whitening_regret_pp": 0.32000000000000917
+        }
+      }
+    },
+    {
+      "dataset": "imagenet100",
+      "shot": "10",
+      "seed": 3,
+      "n_train": 1000,
+      "n_test": 5000,
+      "n_classes": 100,
+      "validation_split": {
+        "mode": "class_balanced_holdout",
+        "val_per_class_cap": 50,
+        "val_frac": 0.2,
+        "n_inner_train": 800,
+        "n_val": 200
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 15,
+        "wcos_budget": 15,
+        "ridge_budget": 15,
+        "knn_budget": 5
+      },
+      "metrics": {
+        "cos": 0.9018,
+        "centered_cos": 0.9022,
+        "euclidean_ncm": 0.8734,
+        "lda_oracle": {
+          "acc": 0.8808,
+          "reg": 0.1,
+          "test_scores": {
+            "1e-08": 0.8414,
+            "3e-08": 0.8414,
+            "1e-07": 0.8414,
+            "3e-07": 0.8414,
+            "1e-06": 0.8414,
+            "3e-06": 0.8418,
+            "1e-05": 0.8418,
+            "3e-05": 0.8422,
+            "0.0001": 0.8444,
+            "0.0003": 0.848,
+            "0.001": 0.8566,
+            "0.003": 0.867,
+            "0.01": 0.8728,
+            "0.03": 0.8766,
+            "0.1": 0.8808
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.8808,
+          "selected": 0.1,
+          "selection": "lda_validation",
+          "val_scores": {
+            "1e-08": 0.8,
+            "3e-08": 0.8,
+            "1e-07": 0.8,
+            "3e-07": 0.8,
+            "1e-06": 0.8,
+            "3e-06": 0.8,
+            "1e-05": 0.8,
+            "3e-05": 0.805,
+            "0.0001": 0.81,
+            "0.0003": 0.825,
+            "0.001": 0.855,
+            "0.003": 0.875,
+            "0.01": 0.905,
+            "0.03": 0.905,
+            "0.1": 0.915
+          },
+          "budget": 15
+        },
+        "wcos_oracle": {
+          "acc": 0.8968,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.8498,
+            "3e-08": 0.8498,
+            "1e-07": 0.8498,
+            "3e-07": 0.8498,
+            "1e-06": 0.8498,
+            "3e-06": 0.8498,
+            "1e-05": 0.8502,
+            "3e-05": 0.8506,
+            "0.0001": 0.851,
+            "0.0003": 0.8536,
+            "0.001": 0.86,
+            "0.003": 0.8682,
+            "0.01": 0.8776,
+            "0.03": 0.8886,
+            "0.1": 0.8968
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.8968,
+          "selected": 0.1,
+          "selection": "wcos_validation",
+          "val_scores": {
+            "1e-08": 0.65,
+            "3e-08": 0.65,
+            "1e-07": 0.65,
+            "3e-07": 0.65,
+            "1e-06": 0.655,
+            "3e-06": 0.665,
+            "1e-05": 0.66,
+            "3e-05": 0.68,
+            "0.0001": 0.715,
+            "0.0003": 0.77,
+            "0.001": 0.835,
+            "0.003": 0.87,
+            "0.01": 0.895,
+            "0.03": 0.905,
+            "0.1": 0.915
+          },
+          "budget": 15
+        },
+        "qda_diag_trainval": {
+          "acc": 0.8462,
+          "selected": 0.1,
+          "selection": "qda_diag_validation",
+          "val_scores": {
+            "1e-08": 0.82,
+            "3e-08": 0.82,
+            "1e-07": 0.82,
+            "3e-07": 0.82,
+            "1e-06": 0.82,
+            "3e-06": 0.82,
+            "1e-05": 0.82,
+            "3e-05": 0.82,
+            "0.0001": 0.82,
+            "0.0003": 0.82,
+            "0.001": 0.82,
+            "0.003": 0.825,
+            "0.01": 0.84,
+            "0.03": 0.85,
+            "0.1": 0.875
+          },
+          "budget": 15
+        },
+        "ridge_trainval": {
+          "acc": 0.9034,
+          "selected": 1000.0,
+          "selection": "ridge_validation",
+          "val_scores": {
+            "0.0001": 0.655,
+            "0.0003": 0.655,
+            "0.001": 0.665,
+            "0.003": 0.665,
+            "0.01": 0.66,
+            "0.03": 0.68,
+            "0.1": 0.72,
+            "0.3": 0.77,
+            "1.0": 0.84,
+            "3.0": 0.87,
+            "10.0": 0.895,
+            "30.0": 0.91,
+            "100.0": 0.915,
+            "300.0": 0.925,
+            "1000.0": 0.935
+          },
+          "budget": 15
+        },
+        "knn_cos_trainval": {
+          "acc": 0.8806,
+          "selected": 5,
+          "selection": "knn_cosine_validation",
+          "val_scores": {
+            "1": 0.905,
+            "3": 0.89,
+            "5": 0.91,
+            "10": 0.875,
+            "20": 0.845
+          },
+          "budget": 5
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.8624,
+          "selected": 10,
+          "test_scores": {
+            "1": 0.8362,
+            "3": 0.8298,
+            "5": 0.8472,
+            "10": 0.8624,
+            "20": 0.8552
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -2.100000000000002,
+          "lda_trainval_minus_cos": -2.100000000000002,
+          "wcos_trainval_minus_cos": -0.5000000000000004,
+          "ridge_minus_cos": 0.15999999999999348,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.9034,
+          "cos_regret_pp": 0.15999999999999348,
+          "best_whitening_regret_pp": 0.6599999999999939
+        }
+      }
+    },
+    {
+      "dataset": "imagenet100",
+      "shot": "10",
+      "seed": 4,
+      "n_train": 1000,
+      "n_test": 5000,
+      "n_classes": 100,
+      "validation_split": {
+        "mode": "class_balanced_holdout",
+        "val_per_class_cap": 50,
+        "val_frac": 0.2,
+        "n_inner_train": 800,
+        "n_val": 200
+      },
+      "tuning_protocol": {
+        "train_only": true,
+        "equal_budget_note": "LDA, WCos, QDA-diag, and Ridge use explicit training-validation selection when validation is available; KNN uses its discrete k grid.",
+        "lda_budget": 15,
+        "wcos_budget": 15,
+        "ridge_budget": 15,
+        "knn_budget": 5
+      },
+      "metrics": {
+        "cos": 0.917,
+        "centered_cos": 0.9174,
+        "euclidean_ncm": 0.889,
+        "lda_oracle": {
+          "acc": 0.8974,
+          "reg": 0.1,
+          "test_scores": {
+            "1e-08": 0.8498,
+            "3e-08": 0.8498,
+            "1e-07": 0.8498,
+            "3e-07": 0.8498,
+            "1e-06": 0.8498,
+            "3e-06": 0.8498,
+            "1e-05": 0.8496,
+            "3e-05": 0.8502,
+            "0.0001": 0.8526,
+            "0.0003": 0.8564,
+            "0.001": 0.866,
+            "0.003": 0.8772,
+            "0.01": 0.8884,
+            "0.03": 0.894,
+            "0.1": 0.8974
+          }
+        },
+        "lda_trainval": {
+          "acc": 0.8974,
+          "selected": 0.1,
+          "selection": "lda_validation",
+          "val_scores": {
+            "1e-08": 0.81,
+            "3e-08": 0.81,
+            "1e-07": 0.81,
+            "3e-07": 0.81,
+            "1e-06": 0.81,
+            "3e-06": 0.81,
+            "1e-05": 0.81,
+            "3e-05": 0.815,
+            "0.0001": 0.82,
+            "0.0003": 0.84,
+            "0.001": 0.855,
+            "0.003": 0.87,
+            "0.01": 0.89,
+            "0.03": 0.89,
+            "0.1": 0.905
+          },
+          "budget": 15
+        },
+        "wcos_oracle": {
+          "acc": 0.9118,
+          "eps": 0.1,
+          "test_scores": {
+            "1e-08": 0.8608,
+            "3e-08": 0.8608,
+            "1e-07": 0.8608,
+            "3e-07": 0.8608,
+            "1e-06": 0.8608,
+            "3e-06": 0.8608,
+            "1e-05": 0.861,
+            "3e-05": 0.861,
+            "0.0001": 0.8618,
+            "0.0003": 0.8632,
+            "0.001": 0.8698,
+            "0.003": 0.8778,
+            "0.01": 0.8908,
+            "0.03": 0.9044,
+            "0.1": 0.9118
+          }
+        },
+        "wcos_trainval": {
+          "acc": 0.9118,
+          "selected": 0.1,
+          "selection": "wcos_validation",
+          "val_scores": {
+            "1e-08": 0.62,
+            "3e-08": 0.62,
+            "1e-07": 0.62,
+            "3e-07": 0.62,
+            "1e-06": 0.62,
+            "3e-06": 0.62,
+            "1e-05": 0.63,
+            "3e-05": 0.645,
+            "0.0001": 0.7,
+            "0.0003": 0.735,
+            "0.001": 0.79,
+            "0.003": 0.845,
+            "0.01": 0.895,
+            "0.03": 0.915,
+            "0.1": 0.92
+          },
+          "budget": 15
+        },
+        "qda_diag_trainval": {
+          "acc": 0.8568,
+          "selected": 0.1,
+          "selection": "qda_diag_validation",
+          "val_scores": {
+            "1e-08": 0.79,
+            "3e-08": 0.79,
+            "1e-07": 0.79,
+            "3e-07": 0.79,
+            "1e-06": 0.79,
+            "3e-06": 0.79,
+            "1e-05": 0.79,
+            "3e-05": 0.79,
+            "0.0001": 0.79,
+            "0.0003": 0.795,
+            "0.001": 0.795,
+            "0.003": 0.795,
+            "0.01": 0.8,
+            "0.03": 0.825,
+            "0.1": 0.875
+          },
+          "budget": 15
+        },
+        "ridge_trainval": {
+          "acc": 0.9194,
+          "selected": 1000.0,
+          "selection": "ridge_validation",
+          "val_scores": {
+            "0.0001": 0.625,
+            "0.0003": 0.625,
+            "0.001": 0.625,
+            "0.003": 0.63,
+            "0.01": 0.635,
+            "0.03": 0.645,
+            "0.1": 0.7,
+            "0.3": 0.735,
+            "1.0": 0.795,
+            "3.0": 0.845,
+            "10.0": 0.9,
+            "30.0": 0.915,
+            "100.0": 0.925,
+            "300.0": 0.93,
+            "1000.0": 0.935
+          },
+          "budget": 15
+        },
+        "knn_cos_trainval": {
+          "acc": 0.9,
+          "selected": 3,
+          "selection": "knn_cosine_validation",
+          "val_scores": {
+            "1": 0.88,
+            "3": 0.915,
+            "5": 0.9,
+            "10": 0.9,
+            "20": 0.845
+          },
+          "budget": 5
+        },
+        "knn_wcos_oracle": {
+          "acc": 0.8694,
+          "selected": 20,
+          "test_scores": {
+            "1": 0.8446,
+            "3": 0.8438,
+            "5": 0.8602,
+            "10": 0.8672,
+            "20": 0.8694
+          },
+          "selection": "test_oracle_on_wcos_space"
+        },
+        "gaps_pp": {
+          "lda_oracle_minus_cos": -1.9600000000000062,
+          "lda_trainval_minus_cos": -1.9600000000000062,
+          "wcos_trainval_minus_cos": -0.5199999999999982,
+          "ridge_minus_cos": 0.23999999999999577,
+          "oracle_minus_trainval_lda": 0.0
+        },
+        "reference": {
+          "name": "ridge_trainval",
+          "acc": 0.9194,
+          "cos_regret_pp": 0.23999999999999577,
+          "best_whitening_regret_pp": 0.759999999999994
+        }
+      }
+    }
+  ]
+}

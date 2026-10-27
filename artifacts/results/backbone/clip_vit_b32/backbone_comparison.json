@@ -1,0 +1,236 @@
+[
+  {
+    "dataset": "cub200",
+    "label": "CUB-200",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.3647090591217506,
+      "tail128_fisher_mass": 0.48203646005126743,
+      "spearman_logeig_logfisher": 0.9656607787420887,
+      "cosine": 0.488954097032547,
+      "mahalanobis": 0.8032447359337246,
+      "whitened_cosine": 0.7568174004554749,
+      "mahal_minus_cos_pp": 31.42906389011776
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.4235181028665388,
+      "tail128_fisher_mass": 0.3492258406509754,
+      "spearman_logeig_logfisher": 0.9337617910357962,
+      "cosine": 0.6748360395431519,
+      "mahalanobis": 0.7172937521574042,
+      "whitened_cosine": 0.6736279129981995,
+      "mahal_minus_cos_pp": 4.245771261425235
+    },
+    "gap_delta_pp": -27.183292628692527
+  },
+  {
+    "dataset": "aircraft",
+    "label": "Aircraft",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.7039570058799468,
+      "tail128_fisher_mass": 0.15905771239481337,
+      "spearman_logeig_logfisher": 0.9501953605149257,
+      "cosine": 0.42334234714508057,
+      "mahalanobis": 0.7986798679867987,
+      "whitened_cosine": 0.7665766477584839,
+      "mahal_minus_cos_pp": 37.53375208417181
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.4797823979478266,
+      "tail128_fisher_mass": 0.28471358469086605,
+      "spearman_logeig_logfisher": 0.9077006335759368,
+      "cosine": 0.37563756108283997,
+      "mahalanobis": 0.5262526252625263,
+      "whitened_cosine": 0.4920492172241211,
+      "mahal_minus_cos_pp": 15.061506417968628
+    },
+    "gap_delta_pp": -22.47224566620318
+  },
+  {
+    "dataset": "cars",
+    "label": "Cars",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.49223376527607726,
+      "tail128_fisher_mass": 0.24899150958788457,
+      "spearman_logeig_logfisher": 0.9781790469344106,
+      "cosine": 0.7807486653327942,
+      "mahalanobis": 0.9013804253202338,
+      "whitened_cosine": 0.8974007964134216,
+      "mahal_minus_cos_pp": 12.063175998743958
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.45374515630383083,
+      "tail128_fisher_mass": 0.3004389008759337,
+      "spearman_logeig_logfisher": 0.9447079277817705,
+      "cosine": 0.6805123686790466,
+      "mahalanobis": 0.7936823778137048,
+      "whitened_cosine": 0.7553786635398865,
+      "mahal_minus_cos_pp": 11.317000913465813
+    },
+    "gap_delta_pp": -0.7461750852781446
+  },
+  {
+    "dataset": "food101",
+    "label": "Food-101",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.3045869971663963,
+      "tail128_fisher_mass": 0.11998995301235091,
+      "spearman_logeig_logfisher": 0.9673829055496226,
+      "cosine": 0.8345346450805664,
+      "mahalanobis": 0.8847524752475248,
+      "whitened_cosine": 0.8854257464408875,
+      "mahal_minus_cos_pp": 5.021783016695835
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.36710905684973233,
+      "tail128_fisher_mass": 0.2009130861685466,
+      "spearman_logeig_logfisher": 0.9713592628832224,
+      "cosine": 0.8108910918235779,
+      "mahalanobis": 0.8483564356435643,
+      "whitened_cosine": 0.8510494828224182,
+      "mahal_minus_cos_pp": 3.746534381998645
+    },
+    "gap_delta_pp": -1.2752486346971899
+  },
+  {
+    "dataset": "pets",
+    "label": "Pets",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.4266417700670143,
+      "tail128_fisher_mass": 0.023183824246453027,
+      "spearman_logeig_logfisher": 0.8992656748295597,
+      "cosine": 0.9362223744392395,
+      "mahalanobis": 0.9555737258108477,
+      "whitened_cosine": 0.9479421973228455,
+      "mahal_minus_cos_pp": 1.935135137160815
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.4413013311041651,
+      "tail128_fisher_mass": 0.12551624475760606,
+      "spearman_logeig_logfisher": 0.8440909100662501,
+      "cosine": 0.7972199320793152,
+      "mahalanobis": 0.9086944671572635,
+      "whitened_cosine": 0.8817116618156433,
+      "mahal_minus_cos_pp": 11.147453507794836
+    },
+    "gap_delta_pp": 9.212318370634021
+  },
+  {
+    "dataset": "cifar100",
+    "label": "CIFAR-100",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.1430188971715849,
+      "tail128_fisher_mass": 0.06747819571189705,
+      "spearman_logeig_logfisher": 0.9400681698153432,
+      "cosine": 0.8691999912261963,
+      "mahalanobis": 0.8797,
+      "whitened_cosine": 0.8891000151634216,
+      "mahal_minus_cos_pp": 1.0500008773803748
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.3716823727675206,
+      "tail128_fisher_mass": 0.1979847902730352,
+      "spearman_logeig_logfisher": 0.9351771981323045,
+      "cosine": 0.6606000065803528,
+      "mahalanobis": 0.7423,
+      "whitened_cosine": 0.7519999742507935,
+      "mahal_minus_cos_pp": 8.169999341964719
+    },
+    "gap_delta_pp": 7.119998464584343
+  },
+  {
+    "dataset": "cifar10",
+    "label": "CIFAR-10",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.2718816472266354,
+      "tail128_fisher_mass": 0.004756042005046288,
+      "spearman_logeig_logfisher": 0.825045341992421,
+      "cosine": 0.9749000072479248,
+      "mahalanobis": 0.9813,
+      "whitened_cosine": 0.982699990272522,
+      "mahal_minus_cos_pp": 0.6399992752075145
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.45998720078003597,
+      "tail128_fisher_mass": 0.009731626233627978,
+      "spearman_logeig_logfisher": 0.7745611710497601,
+      "cosine": 0.8939999938011169,
+      "mahalanobis": 0.9355,
+      "whitened_cosine": 0.9380000233650208,
+      "mahal_minus_cos_pp": 4.1500006198883055
+    },
+    "gap_delta_pp": 3.510001344680791
+  },
+  {
+    "dataset": "tiny_imagenet",
+    "label": "Tiny-ImageNet",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.09220630456378334,
+      "tail128_fisher_mass": 0.20861580105253075,
+      "spearman_logeig_logfisher": 0.9492555128826701,
+      "cosine": 0.8382999897003174,
+      "mahalanobis": 0.8226,
+      "whitened_cosine": 0.8499000072479248,
+      "mahal_minus_cos_pp": -1.5699989700317385
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.31982071188496136,
+      "tail128_fisher_mass": 0.2967236585776543,
+      "spearman_logeig_logfisher": 0.9751763290932679,
+      "cosine": 0.6266000270843506,
+      "mahalanobis": 0.6911,
+      "whitened_cosine": 0.7002000212669373,
+      "mahal_minus_cos_pp": 6.449997291564946
+    },
+    "gap_delta_pp": 8.019996261596685
+  },
+  {
+    "dataset": "imagenet100",
+    "label": "ImageNet-100",
+    "status": "done",
+    "dino": {
+      "dim": 768,
+      "top10_var_pct": 0.12526141747159183,
+      "tail128_fisher_mass": 0.021192772592119574,
+      "spearman_logeig_logfisher": 0.9242455469691674,
+      "cosine": 0.9261999726295471,
+      "mahalanobis": 0.93,
+      "whitened_cosine": 0.9386000037193298,
+      "mahal_minus_cos_pp": 0.38000273704529297
+    },
+    "clip": {
+      "dim": 512,
+      "top10_var_pct": 0.3400821805338737,
+      "tail128_fisher_mass": 0.12781797311888787,
+      "spearman_logeig_logfisher": 0.9564819762019074,
+      "cosine": 0.8112000226974487,
+      "mahalanobis": 0.8748,
+      "whitened_cosine": 0.8754000067710876,
+      "mahal_minus_cos_pp": 6.359997730255129
+    },
+    "gap_delta_pp": 5.979994993209836
+  }
+]

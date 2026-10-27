@@ -1,0 +1,28 @@
+{
+ "all": {
+  "n": 36,
+  "tail128_fisher": 0.6398662877706557,
+  "tail128_enrichment": 0.9358221403168385,
+  "effective_rank": -0.722943140564996,
+  "log10_condition": 0.8681114449190703
+ },
+ "no_cub": {
+  "n": 32,
+  "tail128_fisher": 0.38478341059611154,
+  "tail128_enrichment": 0.9325910386512848,
+  "effective_rank": -0.7325652572085151,
+  "log10_condition": 0.8436103194867064
+ },
+ "datasets": [
+  "aircraft",
+  "cars",
+  "cifar10",
+  "cifar100",
+  "cub200",
+  "food101",
+  "imagenet100",
+  "pets",
+  "tiny_imagenet"
+ ],
+ "cub_groups": 4
+}

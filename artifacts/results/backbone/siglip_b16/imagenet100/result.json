@@ -1,0 +1,108 @@
+{
+  "dataset": "imagenet100",
+  "n_train": 126689,
+  "n_test": 5000,
+  "n_classes": 100,
+  "anisotropy": {
+    "top10_var_pct": 0.27623651619888995,
+    "eig10_tail10_ratio": 4766.994394456811,
+    "condition_number": 49983.75796835721
+  },
+  "fisher": {
+    "tail128_mass": 0.13560141684303254,
+    "tail256_mass": 0.06648542824149076,
+    "top64_mass": 0.6913192880564321,
+    "top128_mass": 0.8643985831569674,
+    "fisher_weighted_rank": 75.99041787049639,
+    "spearman_logeig_logfisher": 0.7557127572593746
+  },
+  "classifier_matrix": {
+    "cosine": 0.899399995803833,
+    "mahalanobis": 0.9184,
+    "whitened_cosine": 0.9233999848365784,
+    "mahal_minus_cos_pp": 1.9000004196166986
+  },
+  "pca_ablation": {
+    "all": {
+      "dim": 768,
+      "cosine": 0.8999999761581421,
+      "mahalanobis": 0.9184
+    },
+    "top16": {
+      "dim": 16,
+      "cosine": 0.6642000079154968,
+      "mahalanobis": 0.7298
+    },
+    "top32": {
+      "dim": 32,
+      "cosine": 0.8023999929428101,
+      "mahalanobis": 0.852
+    },
+    "top64": {
+      "dim": 64,
+      "cosine": 0.8700000047683716,
+      "mahalanobis": 0.8954
+    },
+    "top128": {
+      "dim": 128,
+      "cosine": 0.8924000263214111,
+      "mahalanobis": 0.9144
+    },
+    "top256": {
+      "dim": 256,
+      "cosine": 0.8988000154495239,
+      "mahalanobis": 0.9202
+    },
+    "top512": {
+      "dim": 512,
+      "cosine": 0.9003999829292297,
+      "mahalanobis": 0.9178
+    },
+    "bottom64": {
+      "dim": 64,
+      "cosine": 0.1573999971151352,
+      "mahalanobis": 0.218
+    },
+    "bottom128": {
+      "dim": 128,
+      "cosine": 0.17520000040531158,
+      "mahalanobis": 0.3022
+    },
+    "drop_bottom64": {
+      "dim": 704,
+      "cosine": 0.8999999761581421,
+      "mahalanobis": 0.9174
+    },
+    "drop_bottom128": {
+      "dim": 640,
+      "cosine": 0.8999999761581421,
+      "mahalanobis": 0.9176
+    },
+    "drop_top16": {
+      "dim": 752,
+      "cosine": 0.9092000126838684,
+      "mahalanobis": 0.909
+    },
+    "drop_top64": {
+      "dim": 704,
+      "cosine": 0.8640000224113464,
+      "mahalanobis": 0.8758
+    },
+    "band_64_128": {
+      "dim": 64,
+      "cosine": 0.7978000044822693,
+      "mahalanobis": 0.8056
+    },
+    "band_128_256": {
+      "dim": 128,
+      "cosine": 0.5925999879837036,
+      "mahalanobis": 0.6114
+    },
+    "band_256_end": {
+      "dim": 512,
+      "cosine": 0.4553999900817871,
+      "mahalanobis": 0.6018
+    }
+  },
+  "cil": null
+}

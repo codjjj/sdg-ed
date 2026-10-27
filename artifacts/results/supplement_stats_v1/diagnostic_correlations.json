@@ -1,0 +1,7 @@
+{
+  "n_groups": 36,
+  "corr_tail128_fisher_vs_gap": 0.6398662877660884,
+  "corr_tail128_enrichment_vs_gap": 0.9358221403161138,
+  "corr_effective_rank_vs_gap": -0.7229431405649397,
+  "corr_log_condition_vs_gap": 0.8681441417821342
+}

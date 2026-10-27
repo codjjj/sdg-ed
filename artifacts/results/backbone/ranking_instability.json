@@ -1,0 +1,102 @@
+{
+  "rows": [
+    {
+      "dataset": "aircraft",
+      "label": "Aircraft",
+      "cos_winner": "SigLIP-B/16",
+      "mahal_winner": "DINOv2-B",
+      "tau": 0.6,
+      "flip": true,
+      "cos_selected_mahal": 75.48754875487549,
+      "regret": 4.380438043804375
+    },
+    {
+      "dataset": "cub200",
+      "label": "CUB-200",
+      "cos_winner": "Sup. ViT-B/16",
+      "mahal_winner": "Sup. ViT-B/16",
+      "tau": 0.8666666666666667,
+      "flip": false,
+      "cos_selected_mahal": 84.0697273041077,
+      "regret": 0.0
+    },
+    {
+      "dataset": "cars",
+      "label": "Cars",
+      "cos_winner": "SigLIP-B/16",
+      "mahal_winner": "SigLIP-B/16",
+      "tau": 0.8666666666666667,
+      "flip": false,
+      "cos_selected_mahal": 94.35393607760228,
+      "regret": 0.0
+    },
+    {
+      "dataset": "food101",
+      "label": "Food-101",
+      "cos_winner": "SigLIP-B/16",
+      "mahal_winner": "SigLIP-B/16",
+      "tau": 1.0,
+      "flip": false,
+      "cos_selected_mahal": 91.24752475247526,
+      "regret": 0.0
+    },
+    {
+      "dataset": "pets",
+      "label": "Pets",
+      "cos_winner": "DINOv2-B",
+      "mahal_winner": "DINOv2-B",
+      "tau": 0.7333333333333333,
+      "flip": false,
+      "cos_selected_mahal": 95.55737258108476,
+      "regret": 0.0
+    },
+    {
+      "dataset": "cifar100",
+      "label": "CIFAR-100",
+      "cos_winner": "DINOv2-B",
+      "mahal_winner": "DINOv2-B",
+      "tau": 1.0,
+      "flip": false,
+      "cos_selected_mahal": 87.97,
+      "regret": 0.0
+    },
+    {
+      "dataset": "cifar10",
+      "label": "CIFAR-10",
+      "cos_winner": "DINOv2-B",
+      "mahal_winner": "DINOv2-B",
+      "tau": 0.8666666666666667,
+      "flip": false,
+      "cos_selected_mahal": 98.13,
+      "regret": 0.0
+    },
+    {
+      "dataset": "imagenet100",
+      "label": "ImageNet-100",
+      "cos_winner": "ConvNeXt-B",
+      "mahal_winner": "ConvNeXt-B",
+      "tau": 0.8666666666666667,
+      "flip": false,
+      "cos_selected_mahal": 93.24,
+      "regret": 0.0
+    },
+    {
+      "dataset": "tiny_imagenet",
+      "label": "Tiny-ImageNet",
+      "cos_winner": "DINOv2-B",
+      "mahal_winner": "ConvNeXt-B",
+      "tau": 0.4666666666666667,
+      "flip": true,
+      "cos_selected_mahal": 82.26,
+      "regret": 1.559999999999988
+    }
+  ],
+  "top1_flips": 2,
+  "n_datasets": 9,
+  "mean_kendall_tau": 0.8074074074074075,
+  "median_kendall_tau": 0.8666666666666667,
+  "mean_cosine_selection_regret_pp": 0.6600486715338181,
+  "max_cosine_selection_regret_pp": 4.380438043804375,
+  "pairwise_discordant": 13,
+  "pairwise_total": 135
+}

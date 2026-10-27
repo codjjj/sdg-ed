@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store
+
+# Local runtime directories (never committed)
+outputs/
+features/
+data/
+models/
